@@ -1,14 +1,24 @@
 {
     "chaussures":[
         {
+            "nom": "chaussures surperstar ii",
+            "marque": "adidas",
+            "couleur": ["noir"],
+            "pointure": [[37, 38, 39, 40, 41, 42, 43, 44, 45]],
+            "categorie": "livestyle",
+            "prix": 130.00,
+            "nom_image": ["surperstar_ii_noir"],
+            "description": "Découvre une icône réinventée en enfilant cette chaussure adidas Superstar II. Conçue en cuir souple et crin de poney, elle affiche un mix de textures original en clin d'oeil à son héritage basketball des 90's. Le shell-toe emblématique présente désormais une forme plus stylée tout en continuant à protéger le bout du pied, tandis que la semelle cupsole en caoutchouc reste fidèle à ses racines sport. Que tu te rendes à un brunch l'après-midi ou sortes le soir, cette sneaker emblématique revisitée fera sensation."
+        },
+        {
             "nom":"chaussures surperstar",
-            "marque":"adidas",
-            "couleur":"noir",
-            "pointure":"",
+            "marque": "adidas",
+            "couleur": ["blanc"],
+            "pointure": [[37, 38, 39, 40, 41, 42, 43, 44, 45]],
             "categorie":"livestyle",
-            "prix":120.00,
-            "nom_image":"",
-            "description":""
+            "prix": 120.00,
+            "nom_image": ["surperstar_blanc"],
+            "description": ""
         }
     ]
 }
