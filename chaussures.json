@@ -1,0 +1,14 @@
+{
+    "chaussures":[
+        {
+            "nom":"chaussures surperstar",
+            "marque":"adidas",
+            "couleur":"noir",
+            "pointure":"",
+            "categorie":"livestyle",
+            "prix":120.00,
+            "nom_image":"",
+            "description":""
+        }
+    ]
+}
