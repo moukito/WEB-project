@@ -129,6 +129,96 @@
             "prix": 270.00,
             "nom_image": ["x_crazyfast_1_ll_fg_noir","x_crazyfast_1_ll_fg_blanc"],
             "description": "Change le cours du jeu avec la chaussure X Crazyfast.1 Terrain souple. Dotée d'une tige Aeropacity Speedskin semi-transparente stylée, cette chaussure de football sans lacets n'est renforcée qu'aux endroits stratégiques. La tige sans lacets adidas PRIMEKNIT offre un chaussant ferme et confortable, tandis que la SEMELLE EXTÉRIEURE SPEEDFRAME avec AEROPLATE est conçue pour la propulsion et les mouvements dynamiques. La tige est confectionnée en matériaux recyclés à hauteur de 50 % minimum. Ce produit ne constitue qu'une de nos solutions pour contribuer à mettre fin aux déchets plastiques."
+        },
+        {
+            "nom": "530",
+            "marque": "new balance",
+            "couleur": ["noir", "blanc", "argent"],
+            "pointure": [[36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "lifestyle",
+            "prix": 120.00,
+            "nom_image": ["530_noir","530_blanc","530_argent"],
+            "description": "La MR350 originale combinait l'esthétique du passage à l'an 2000 à la fiabilité de chaussures de running durables. La nouvelle version de la 530 ajoute un style contemporain et prêt-à-porter à ce design axé sur la performance. La semelle intermédiaire ABZORB est associée à un revêtement classique, en maille et synthétique, qui fait appel aux courbes et aux angles pour donner un caractère distinctif et technologique."
+        },
+        {
+            "nom": "574 core",
+            "marque": "new balance",
+            "couleur": ["bourgogne", "gris", "blanc", "noir"],
+            "pointure": [[35, 36, 37, 38, 39, 40, 41, 42, 43, 44], [35, 37, 38, 39, 40, 41, 42, 43, 44, 45], [35, 36, 37, 38, 39, 40, 42, 43, 44, 45], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]],
+            "categorie": "lifestyle",
+            "prix": 110.00,
+            "nom_image": ["574_core_bourgogne","574_core_gris","574_core_blanc","574_core_noir"],
+            "description": "« La chaussure la plus New Balance de tous les temps ». Le message est clair, non ? Peut-être pas complètement. La New Balance 574 pourrait bien être notre icône la plus invraisemblable. La 574 a été conçue pour offrir fiabilité et polyvalence, et non pour servir de vitrine à des technologies révolutionnaires ou à des matières haut de gamme. Et c'est précisément cette polyvalence simple et sans prétentions qui a hissé la 574 au rang de chaussures les plus emblématiques. En tant que modèle hybride route / trail conçu sur une forme plus large que les silhouettes de course étroites de la génération précédente, la 574 offrait un mélange unique et polyvalent de nouveauté, de différence, de simplicité, de robustesse, de durabilité et de confort qui a été adopté comme un incontournable des garde-robes dans le monde entier. C'est pourquoi, aujourd'hui, la New Balance 574 Core incarne le style révolutionnaire de New Balance, un style porté par tous."
+        },
+        {
+            "nom": "t500",
+            "marque": "new balance",
+            "couleur": ["blanc", "epicea", "perle", "gris", "rouge", "vert"],
+            "pointure": [[35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45], [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]],
+            "categorie": "lifestyle",
+            "prix": 130.00, 
+            "nom_image": ["t500_blanc","t500_epicea","t500_perle","t500_gris","t500_rouge","t500_vert"],
+            "description": "Sortie en 1982, la T500 a été conçue pour apporter une qualité supérieure au style polyvalent sur les courts de tennis. Même si la nouvelle version de la T500 est plus axée sur les loisirs que sur la compétition, tout ce qui a fait d'elle une formidable chaussure de tennis en fait aujourd'hui un classique intemporel. L'empeigne présente une construction en mesh et daim pour une version haut de gamme du modèle familier. La semelle intermédiaire en polyuréthane offre une version minimaliste de la technologie des années 80, se démarquant des semelles vulcanisées des anciens modèles de tennis."
+        },
+        {
+            "nom": "ct302",
+            "marque": "new balance",
+            "couleur": ["blanc", "noir"],
+            "pointure":[[36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52], [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52]],
+            "categorie": "lifestyle",
+            "prix": 130.00,
+            "nom_image": ["ct302_blanc","ct302_noir"],
+            "description": "Conçues pour les personnes en quête de style, la CT302 associe un profil de chaussure de tennis traditionnel à une semelle extérieure épaisse très tendance, pour une silhouette fraîche qui ne manquera pas de faire tourner les têtes. Cette chaussure décontractée est également dotée d'une empeigne en cuir pour une durabilité et une facilité d'utilisation."
+        },
+        {
+            "nom": "two wxy v5",
+            "marque": "new balance",
+            "couleur": ["limelight", "castlerock"],
+            "pointure": [[40, 41, 42, 43, 44, 45, 46], [40, 41, 42, 43, 44, 45, 46]],
+            "categorie": "basketball",
+            "prix": 130.00,
+            "nom_image": ["two_wxy_v5_limelight","two_wxy_v5_castlerock"],
+            "description": "La TWO WXY est conçue pour les joueurs qui peuvent faire la différence à partir de n’importe quel endroit du terrain, sans position déterminée. C’est pourquoi la dernière version associe fiabilité et stabilité à la liberté de mouvement. L’amorti combiné emblématique de la TWO WXY a été perfectionné. La FuelCell procure une sensation de réactivité, pour des mouvements rapides, dynamiques, tandis que la Fresh Foam X, au niveau du talon et de la plante du pied, assure confort constant et protection contre les chocs."
+        },
+        {
+            "nom": "kawhi iv",
+            "marque": "new balance",
+            "couleur": ["rouge", "noir"],
+            "pointure": [[36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50], [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]],
+            "categorie": "basketball",
+            "prix": 170.00,
+            "nom_image": ["kawhi_iv_rouge","kawhi_iv_noir"],
+            "description": "La KAWHI IV reproduit l'habileté et le style incomparables de Kawhi Leonard, avec un design conçu pour des performances explosives paré d'une touche de modernité. Cette silhouette aérodynamique et profilée est dotée d'une empeigne en maille avec superpositions synthétiques offrant un soutien latéral. La combinaison finement pensée de FuelCell et d'une plaque en fibre de carbone offre une sensation explosive de retour d'énergie."
+        },
+        {
+            "nom": "hesi low v2",
+            "marque": "new balance",
+            "couleur": ["bleu clair", "blanc", "noir", "bleu"],
+            "pointure": [[40, 41, 42, 43, 44, 45, 46, 47], [40, 41, 42, 43, 44, 45, 46, 47], [40, 41, 42, 43, 44, 45, 46, 47], [40, 41, 42, 43, 44, 45, 46, 47]],
+            "categorie": "basketball",
+            "prix": 120.00,
+            "nom_image": ["hesi_low_v2_bleu_clair","hesi_low_v2_blanc","hesi_low_v2_noir","hesi_low_v2_bleu"],
+            "description": "La nouvelle Hesi Low v2 est dotée d'une semelle intermédiaire FuelCell sur toute la longueur, associée à un motif de traction redessiné, qui rayonne vers l'extérieur à partir de la plante du pied. Cette chaussure réactive et légère est conçue pour tirer parti des opportunités en une fraction de seconde et des centimètres d'espace supplémentaires créés par les coupes, arrêts et accélérations soudains des joueurs les plus rapides."
+        },
+        {
+            "nom": "furon elite fg v8",
+            "marque": "new balance",
+            "couleur": ["blanc", "limelight"],
+            "pointure": [[40, 41, 42, 43, 44, 45, 46, 47, 48], [40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "football",
+            "prix": 230.00,
+            "nom_image": ["furon_elite_fg_v8_blanc", "furon_elite_fg_v8_limelight"],
+            "description": "Conçue pour la vitesse. La vitesse est importante. La Furon 8 Elite est une nouvelle version rationalisée, conçue pour une précision optimale au rythme des joueurs les plus rapides. L'empeigne Hypoknit finement ajustée offre une sensation supérieure du pied à la balle sur les frappes puissantes et fines. La semelle légère et réactive est dotée d'un crampon supplémentaire, conçu pour favoriser le contrôle lors des arrêts soudains et des pivotements brusques."
+        },
+        {
+            "nom": "442 pro in ls v2",
+            "marque": "new balance",
+            "couleur": ["blanc", "noir"],
+            "pointure": [[36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "football",
+            "prix": 110.00,
+            "nom_image": ["442_pro_in_ls_v2_blanc","442_pro_in_ls_v2_noir"],
+            "description": "Conçu pour la qualité. Le modèle 442 Pro Indoor Lifestyle associe un style intemporel à des performances modernes, parfaites pour une utilisation sur le terrain ou en dehors."
         }
     ]
 }
