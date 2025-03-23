@@ -131,6 +131,66 @@
             "description": "Change le cours du jeu avec la chaussure X Crazyfast.1 Terrain souple. Dotée d'une tige Aeropacity Speedskin semi-transparente stylée, cette chaussure de football sans lacets n'est renforcée qu'aux endroits stratégiques. La tige sans lacets adidas PRIMEKNIT offre un chaussant ferme et confortable, tandis que la SEMELLE EXTÉRIEURE SPEEDFRAME avec AEROPLATE est conçue pour la propulsion et les mouvements dynamiques. La tige est confectionnée en matériaux recyclés à hauteur de 50 % minimum. Ce produit ne constitue qu'une de nos solutions pour contribuer à mettre fin aux déchets plastiques."
         },
         {
+            "nom": "mafate speed 4 lite",
+            "marque": "hoka",
+            "couleur": ["noir", "cold brew"],
+            "pointure": [[39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "lifestyle",
+            "prix": 190.00,
+            "nom_image": ["mafate_speed_4_lite_noir","mafate_speed_4_lite_cold_brew"],
+            "description": "Brouillant les frontières entre performance et esthétique comme jamais auparavant, la Mafate Speed 4 Lite se distingue par une tige ultralégère et transparente. Basée sur la Mafate Speed 4, elle combine avec audace technologie de trail, esthétique minimaliste et longévité au quotidien."
+        },
+        {
+            "nom": "clifton one9",
+            "marque": "hoka",
+            "couleur": ["noir", "habanero", "bleu", "frost"],
+            "pointure": [[37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "lifestyle",
+            "prix": 160.00,
+            "nom_image": ["clifton_one9_noir","clifton_one9_habanero","clifton_one9_bleu","clifton_one9_frost"],
+            "description": "Directement inspirée du modèle Clifton 1 original, la Clifton One9 comporte une tige rétro dotée d'une sous-couche en mesh ajouré contemporaine. Un confort optimal et une semelle emblématique viennent parfaire ce modèle. Esthétique rétro ne signifie pas moins de confort au quotidien."
+        },
+        {
+            "nom": "elite terrain system ora primo",
+            "marque": "hoka",
+            "couleur": ["moonstone", "antique olive", "oatmeal"],
+            "pointure": [[37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "lifestyle",
+            "prix": 120.00,
+            "nom_image": ["elite_terrain_system_ora_primo_moonstone","elite_terrain_system_ora_primo_antique_olive","elite_terrain_system_ora_primo_oatmeal"],
+            "description": "Inspirée par le confort et la patine unique des vêtements de travail, la chaussure Ora Primo de la collection Elite Terrain System est un modèle à enfiler futuriste, idéal pour la récupération, décliné dans des matières intemporelles comme le nubuck et présentant des rivets en métal qui se poliront joliment avec le temps. Offrant le même confort que le modèle original, mais retravaillée avec un savoir-faire sur mesure, cette chaussure décontractée fera tout le travail à votre place."
+        },
+        {
+            "nom": "mafate speed 2",
+            "marque": "hoka",
+            "couleur": ["varsity navy", "noir", "gris", "electric tangerine", "clay", "hoka citrus", "putty", "alabaster", "mercury", "blanc"],
+            "pointure": [[37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48], [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48]],
+            "categorie": "lifestyle",
+            "prix": 180.00,
+            "nom_image": ["mafate_speed_2_varsity_navy","mafate_speed_2_noir","mafate_speed_2_gris","mafate_speed_2_electric_tangerine","mafate_speed_2_clay","mafate_speed_2_hoka_citrus","mafate_speed_2_putty","mafate_speed_2_alabaster","mafate_speed_2_mercury","mafate_speed_2_blanc"],
+            "description": "La MAFATE SPEED 2 a été conçue pour offrir des qualités de maintien et d'amorti sur les terrains techniques et pour toutes les distances. Cette nouvelle version comporte un siège baquet profond pour le maintien et un profil de semelle incurvé sous les métas optimisé pour des transitions fluides sur toute la foulée. La semelle externe présente des rainures souples profondes pour s'adapter à différents types de terrains. Les crampons Vibram® Mega-Grip de 5 mm permettent de négocier toutes les surfaces, même les plus techniques. La MAFATE SPEED 2 garantit des performances indéfectibles pour toutes les distances de trail."
+        },
+        {
+            "nom": "bondi 9",
+            "marque": "hoka",
+            "couleur": ["frost", "oatmeal", "see moss", "varsity navy", "blanc", "drizzle", "noir", "gris", "luna moth"],
+            "pointure": [[40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]],
+            "categorie": "basketball",
+            "prix": 180.00,
+            "nom_image": ["bondi_9_frost","bondi_9_oatmeal","bondi_9_see_moss","bondi_9_varsity_navy","bondi_9_blanc","bondi_9_drizzle","bondi_9_noir","bondi_9_gris","bondi_9_luna_moth"],
+            "description": "Chaussure parmi les plus robustes de la gamme HOKA, la Bondi 9 offre le summum du confort moelleux pour le running au quotidien. Entièrement repensée de A à Z, cette nouvelle version est dotée d'une hauteur de semelle augmentée, d'une nouvelle semelle intermédiaire supplémentaire en mousse de qualité supérieure pour procurer cette foulée douce et résiliente désormais synonyme du modèle Bondi. Désormais dotée d'un bracelet moulé en 3D et d'une tige en maille avec tricotage zonal respirant, cette chaussure culte ultra-amortie a été finie avec du caoutchouc Durabrasion Rubber pour combattre lChaussure parmi les plus robustes de la gamme HOKA, la Bondi 9 offre le summum du confort moelleux pour le running au quotidien. Entièrement repensée de A à Z, cette nouvelle version est dotée d'une hauteur de semelle augmentée, d'une nouvelle semelle intermédiaire supplémentaire en mousse de qualité supérieure pour procurer cette foulée douce et résiliente désormais synonyme du modèle Bondi. Désormais dotée d'un bracelet moulé en 3D et d'une tige en maille avec tricotage zonal respirant, cette chaussure culte ultra-amortie a été finie avec du caoutchouc Durabrasion Rubber pour combattre l'usure dans les zones à risques.usure dans les zones à risques."
+        },
+        {
+            "nom": "kawana 2",
+            "marque": "hoka",
+            "couleur": ["blanc", "sea moss", "gris", "noir", "alabaster", "wheat", "slate", "varsity navy"],
+            "pointure": [[40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49], [40, 41, 42, 43, 44, 45, 46, 47, 48, 49]],
+            "categorie": "basketball",
+            "prix": 140.00,
+            "nom_image": ["kawana_2_blanc","kawana_2_sea_moss","kawana_2_gris","kawana_2_noir","kawana_2_alabaster","kawana_2_wheat","kawana_2_slate","kawana_2_varsity_navy"],
+            "description": "Chaussure d'entraînement accessible procurant une foulée équilibrée, la Kawana 2 est dotée d'une tige en mesh monocouche, d'un chausson intérieur aussi confortable qu'une paire de chaussettes et d'un laçage à passants pour un meilleur maintien du pied. Conçue pour les mouvements latéraux, cette chaussure passe aisément de la rue à la salle d'entraînement grâce à sa semelle intermédiaire en caoutchouc dévulcanisé moucheté et sa semelle extérieure en gomme."
+        },
+        {
             "nom": "530",
             "marque": "new balance",
             "couleur": ["noir", "blanc", "argent"],
@@ -178,7 +238,7 @@
             "categorie": "basketball",
             "prix": 130.00,
             "nom_image": ["two_wxy_v5_limelight","two_wxy_v5_castlerock"],
-            "description": "La TWO WXY est conçue pour les joueurs qui peuvent faire la différence à partir de n’importe quel endroit du terrain, sans position déterminée. C’est pourquoi la dernière version associe fiabilité et stabilité à la liberté de mouvement. L’amorti combiné emblématique de la TWO WXY a été perfectionné. La FuelCell procure une sensation de réactivité, pour des mouvements rapides, dynamiques, tandis que la Fresh Foam X, au niveau du talon et de la plante du pied, assure confort constant et protection contre les chocs."
+            "description": "La TWO WXY est conçue pour les joueurs qui peuvent faire la différence à partir de n'importe quel endroit du terrain, sans position déterminée. C'est pourquoi la dernière version associe fiabilité et stabilité à la liberté de mouvement. L'amorti combiné emblématique de la TWO WXY a été perfectionné. La FuelCell procure une sensation de réactivité, pour des mouvements rapides, dynamiques, tandis que la Fresh Foam X, au niveau du talon et de la plante du pied, assure confort constant et protection contre les chocs."
         },
         {
             "nom": "kawhi iv",
