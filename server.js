@@ -3,4 +3,4 @@ require('@babel/register')({
     extensions: ['.jsx', '.js']
 });
 
-module.exports = require('./server/index.jsx');
+module.exports = require('./server/index.js');
