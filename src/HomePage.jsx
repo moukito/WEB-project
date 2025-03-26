@@ -14,10 +14,6 @@ const trendyShoes = [
 const HomePage = () => {
   return (
     <div style={{ backgroundColor: '#fff', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      {/* Header */}
-      <header style={{ padding: '20px', backgroundColor: '#f1f1f1' }}>
-        <h2 style={{ margin: 0 }}>Header</h2>
-      </header>
 
       {/* Contenu principal */}
       <main style={{ flex: 1, padding: '0 40px 40px' }}>
@@ -46,11 +42,6 @@ const HomePage = () => {
           </div>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer style={{ padding: '20px', backgroundColor: '#f1f1f1', textAlign: 'center' }}>
-        <p style={{ margin: 0 }}>Footer</p>
-      </footer>
     </div>
   );
 };

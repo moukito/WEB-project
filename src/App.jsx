@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css'
 import Lifestyle from "./pages/Lifestyle";
 import Football from "./pages/Football";
 import Header from "./components/Header";
 import Footer from "./components/footer";
 import HomePage from "./HomePage"
+import PriceButton from './components/tab.jsx'
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
             </Routes>
             <HomePage/>
             <Footer/>
+            <PriceButton />
         </Router>
     );
 }
