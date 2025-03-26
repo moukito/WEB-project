@@ -4,9 +4,11 @@ import Footer from './components/footer.jsx'
 function App() {
     return (
         <>
-            <Footer />
+          <HomePage /> {/* On affiche la page ici */}
+          <Footer />
         </>
     )
 }
 
-export default App
+export default App;
+
