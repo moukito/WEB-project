@@ -1,4 +1,5 @@
 import React from 'react';
+import YatisLogo from "../assets/yatis_shoes.svg"
 
 function Footer() {
 	return (
@@ -45,7 +46,8 @@ function Footer() {
 					</a>
 				</div>
 			</nav>
-			<aside>
+			<aside className="flex items-center gap-8">
+				<img src={YatisLogo} alt="Yatis Logo" className="w-15 h-15" />
 				<p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
 			</aside>
 		</footer>
