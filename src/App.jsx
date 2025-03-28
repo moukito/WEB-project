@@ -7,6 +7,7 @@ import Football from './pages/Football.jsx'
 import CartPage from './pages/CartPage.jsx'
 import ProductTest from './pages/ProductTest.jsx'
 import { CartProvider } from './context/CartContext.jsx'
+import HomePage from "./HomePage.jsx";
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                             <Route path="/test-panier" element={<ProductTest />} />
                         </Routes>
                     </main>
+	                <HomePage />
                     <Footer />
                 </div>
             </BrowserRouter>
@@ -30,4 +32,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
