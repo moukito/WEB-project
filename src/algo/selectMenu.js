@@ -109,18 +109,19 @@ const menu =
         ]
       }
 
-function estUnMenuComplet(menu) {
-  /* Vérifier si un menu contient au moins une entrée, un plat et un dessert */
-    return menu.entrees && menu.entrees.length > 0 && 
-      menu.plats && menu.plats.length > 0 && 
-      menu.desserts && menu.desserts.length > 0;
-  }
+function elementsNonVides(elements) {
+  /* Vérifier la liste d'entrées ou de plats ou de desserts est non vide */
+  return (elements && elements.length > 0);
+}
         
 
 function menuParSaison(saison, menu){
 /* Filtrer les entrées, les plats et les dessert par saison */
   function filtrerParSaison(elements) {
     /* Vérifier que tous les ingrédients de l'élément sont de la bonne saison */
+    if (!elementsNonVides(elements)) {
+      return [];
+    }
     return elements.filter(element => (element.ingredients.every(ingredient => 
             ingredient.saison === saison || ingredient.saison === "toute")));
   };
@@ -136,22 +137,23 @@ function menuParSaison(saison, menu){
 }
 
 console.log("Menu filtré par saison:")
-console.log(menuParSaison("hiver", menu))
+console.log(menuParSaison("hiver", menuParSaison("hiver", menu)))
 
-function menuParPrix(prixMax, menu) {
-/* Filtrer les entrées, les plats et les dessert par prix */
-  function filtrerParPrix(elements) {
-    /* Vérifier que tous les ingrédients de l'élément sont de la bonne saison */
-    return elements.filter(element => (element.ingredients.every(ingredient => 
-            ingredient.prix <= prixMax)));
-  };
-
-  const menuFiltre = {
-    ...menu,
-    entrees: filtrerParPrix(menu.entrees),
-    plats: filtrerParPrix(menu.plats),
-    desserts: filtrerParPrix(menu.desserts)
-  };
-
-  return menuFiltre;
+function prixMoyenneSelection(menu) {
+/* Calculer le prix moyenne d'une sélection du menu */
+  function prixMoyenneElements(elements) {
+    /* Calculer le prix moyenne d'un élément */
+    if (!elementsNonVides(elements)) {
+      return 0;
+    }
+    return elements.reduce((total, element) => 
+      (total + element.ingredients.reduce((sum, ingredient) => 
+        sum + ingredient.prix, 0)), 0) / elements.length;
+  }
+  return prixMoyenneElements(menu.entrees)
+  + prixMoyenneElements(menu.plats)
+  + prixMoyenneElements(menu.desserts);
 }
+
+console.log("Prix total des entrées:")
+console.log(prixMoyenneSelection(menu))
