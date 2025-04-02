@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const menusSemaine = [
   { midi: { entree: 'Salade verte', plat: 'Poulet rôti', dessert: 'Tarte aux pommes', allergenes: ['Gluten'], proteines: '15g' }, soir: { entree: 'Soupe de légumes', plat: 'Omelette', dessert: 'Yaourt', allergenes: [] } },
@@ -35,6 +36,7 @@ const RepasCard = ({ jour, type, openModal }) => (
 );
 
 const PageAccueil = () => {
+  const navigate = useNavigate();
   // On enrichit le tableau menusSemaine avec une propriété "jour" calculée dynamiquement
   const planning = menusSemaine.map((menu, i) => ({
     ...menu,
@@ -92,6 +94,7 @@ const PageAccueil = () => {
             )}
             <div className="flex justify-between mt-4">
               <button onClick={closeModal} className="bg-gray-500 text-white px-4 py-2 rounded">Fermer</button>
+              <button onClick={() => {navigate("/menu")}} className="bg-gray-500 text-white px-4 py-2 rounded">Modifier</button>
             </div>
           </div>
         </div>
