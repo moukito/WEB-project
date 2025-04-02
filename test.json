@@ -1,0 +1,790 @@
+{
+    "menus": [
+      {
+        "id": 1,
+        "nom_menu": "Menu Gourmand",
+        "entrees": [
+          {
+            "nom": "Salade de carottes",
+            "ingrediants": [
+              {"type": "legume", "nom": "carotte", "prix": 5, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Velouté de champignons",
+            "ingrediants": [
+              {"type": "legume", "nom": "champignon", "prix": 6, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          },
+          {
+            "nom": "Terrine de légumes",
+            "ingrediants": [
+              {"type": "legume", "nom": "courgette", "prix": 7, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Steak de boeuf",
+            "ingrediants": [
+              {"type": "viande", "nom": "boeuf", "prix": 15, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Poulet pané",
+            "ingrediants": [
+              {"type": "volaille", "nom": "poulet", "prix": 12, "saison": "toute", "allergenes": "gluten"},
+              {"type": "céréale", "nom": "chapelure", "prix": 2, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "pané"
+          },
+          {
+            "nom": "Filet de saumon",
+            "ingrediants": [
+              {"type": "poisson", "nom": "saumon", "prix": 18, "saison": "toute", "allergenes": "poisson"},
+              {"type": "assaisonnement", "nom": "citron", "prix": 2, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cuit vapeur"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Yaourt nature",
+            "ingrediants": [
+              {"type": "lacté", "nom": "yaourt", "prix": 4, "saison": "hiver", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Fondant au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 6, "saison": "toute", "allergenes": "gluten, lactose"},
+              {"type": "produit laitier", "nom": "beurre", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "chaud"
+          },
+          {
+            "nom": "Tarte aux pommes",
+            "ingrediants": [
+              {"type": "fruit", "nom": "pomme", "prix": 5, "saison": "automne", "allergenes": "gluten"},
+              {"type": "pâtisserie", "nom": "pâte brisée", "prix": 4, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "tiède"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "nom_menu": "Menu Tradition",
+        "entrees": [
+          {
+            "nom": "Soupe à l'oignon",
+            "ingrediants": [
+              {"type": "legume", "nom": "oignon", "prix": 5, "saison": "hiver", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          },
+          {
+            "nom": "Salade de betteraves",
+            "ingrediants": [
+              {"type": "legume", "nom": "betterave", "prix": 4, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Œufs mimosa",
+            "ingrediants": [
+              {"type": "oeuf", "nom": "œuf", "prix": 3, "saison": "toute", "allergenes": "oeuf"}
+            ],
+            "caracteristique": "froide"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Coq au vin",
+            "ingrediants": [
+              {"type": "volaille", "nom": "coq", "prix": 14, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "vin rouge", "prix": 5, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "mijoté"
+          },
+          {
+            "nom": "Gratin dauphinois",
+            "ingrediants": [
+              {"type": "laitier", "nom": "crème fraîche", "prix": 6, "saison": "toute", "allergenes": "lactose"},
+              {"type": "legume", "nom": "pomme de terre", "prix": 4, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cuisiné"
+          },
+          {
+            "nom": "Cabillaud rôti",
+            "ingrediants": [
+              {"type": "poisson", "nom": "cabillaud", "prix": 17, "saison": "toute", "allergenes": "poisson"},
+              {"type": "assaisonnement", "nom": "ail", "prix": 2, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "rôti"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Crème brûlée",
+            "ingrediants": [
+              {"type": "laitier", "nom": "crème", "prix": 6, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Mousse au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Île flottante",
+            "ingrediants": [
+              {"type": "oeuf", "nom": "œuf", "prix": 3, "saison": "toute", "allergenes": "oeuf"}
+            ],
+            "caracteristique": "froid"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "nom_menu": "Menu Express",
+        "entrees": [
+          {
+            "nom": "Wrap de légumes",
+            "ingrediants": [
+              {"type": "legume", "nom": "laitue", "prix": 3, "saison": "toute", "allergenes": ""},
+              {"type": "legume", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Toast avocat",
+            "ingrediants": [
+              {"type": "fruit", "nom": "avocat", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "céréale", "nom": "pain complet", "prix": 2, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "tiede"
+          },
+          {
+            "nom": "Mini quiches",
+            "ingrediants": [
+              {"type": "produit laitier", "nom": "crème", "prix": 2, "saison": "toute", "allergenes": "lactose"},
+              {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Burger de poulet",
+            "ingrediants": [
+              {"type": "volaille", "nom": "poulet", "prix": 10, "saison": "toute", "allergenes": ""},
+              {"type": "céréale", "nom": "pain burger", "prix": 3, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Pizza margherita",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "pâte à pizza", "prix": 4, "saison": "toute", "allergenes": "gluten"},
+              {"type": "produit laitier", "nom": "mozzarella", "prix": 5, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "cuit au four"
+          },
+          {
+            "nom": "Pâtes carbonara",
+            "ingrediants": [
+              {"type": "pâtes", "nom": "spaghetti", "prix": 4, "saison": "toute", "allergenes": "gluten"},
+              {"type": "produit laitier", "nom": "crème", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "crémeux"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Glace vanille",
+            "ingrediants": [
+              {"type": "lacté", "nom": "glace", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Brownie",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 4, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "chaud"
+          },
+          {
+            "nom": "Fruit frais",
+            "ingrediants": [
+              {"type": "fruit", "nom": "pomme", "prix": 2, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "frais"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "nom_menu": "Menu Epicurien",
+        "entrees": [
+          {
+            "nom": "Tartare de saumon",
+            "ingrediants": [
+              {"type": "poisson", "nom": "saumon", "prix": 8, "saison": "toute", "allergenes": "poisson"},
+              {"type": "assaisonnement", "nom": "citron", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cru"
+          },
+          {
+            "nom": "Salade de roquette",
+            "ingrediants": [
+              {"type": "legume", "nom": "roquette", "prix": 4, "saison": "printemps", "allergenes": ""},
+              {"type": "produit laitier", "nom": "parmesan", "prix": 2, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Bruschetta",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "baguette", "prix": 3, "saison": "toute", "allergenes": "gluten"},
+              {"type": "legume", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "grillée"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Risotto aux champignons",
+            "ingrediants": [
+              {"type": "céréale", "nom": "riz arborio", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "legume", "nom": "champignon", "prix": 5, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "crémeux"
+          },
+          {
+            "nom": "Magret de canard",
+            "ingrediants": [
+              {"type": "viande", "nom": "canard", "prix": 16, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Filet mignon",
+            "ingrediants": [
+              {"type": "viande", "nom": "porc", "prix": 15, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cuit"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Tiramisu",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "mascarpone", "prix": 5, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Crème caramel",
+            "ingrediants": [
+              {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Macarons",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "amande", "prix": 4, "saison": "toute", "allergenes": "fruit à coque"}
+            ],
+            "caracteristique": "sec"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "nom_menu": "Menu Végétarien",
+        "entrees": [
+          {
+            "nom": "Salade de quinoa",
+            "ingrediants": [
+              {"type": "céréale", "nom": "quinoa", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "legume", "nom": "concombre", "prix": 2, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Soupe de légumes",
+            "ingrediants": [
+              {"type": "legume", "nom": "carotte", "prix": 3, "saison": "hiver", "allergenes": ""},
+              {"type": "legume", "nom": "poireau", "prix": 3, "saison": "hiver", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          },
+          {
+            "nom": "Carpaccio de betterave",
+            "ingrediants": [
+              {"type": "legume", "nom": "betterave", "prix": 4, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "cru"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Lasagne végétarienne",
+            "ingrediants": [
+              {"type": "pâtes", "nom": "feuilles de lasagne", "prix": 4, "saison": "toute", "allergenes": "gluten"},
+              {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "cuit au four"
+          },
+          {
+            "nom": "Burger végétarien",
+            "ingrediants": [
+              {"type": "légumineuse", "nom": "lentilles", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "céréale", "nom": "pain burger", "prix": 3, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Gratin de courgettes",
+            "ingrediants": [
+              {"type": "legume", "nom": "courgette", "prix": 3, "saison": "été", "allergenes": ""},
+              {"type": "laitier", "nom": "crème", "prix": 2, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "cuit"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Salade de fruits",
+            "ingrediants": [
+              {"type": "fruit", "nom": "melon", "prix": 3, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "frais"
+          },
+          {
+            "nom": "Sorbet citron",
+            "ingrediants": [
+              {"type": "fruit", "nom": "citron", "prix": 3, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Panna cotta végétale",
+            "ingrediants": [
+              {"type": "produit végétal", "nom": "lait d'amande", "prix": 4, "saison": "toute", "allergenes": "amande"}
+            ],
+            "caracteristique": "crémeux"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "nom_menu": "Menu du Chef",
+        "entrees": [
+          {
+            "nom": "Velouté de potimarron",
+            "ingrediants": [
+              {"type": "legume", "nom": "potimarron", "prix": 5, "saison": "automne", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          },
+          {
+            "nom": "Salade de mâche",
+            "ingrediants": [
+              {"type": "legume", "nom": "mâche", "prix": 4, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Ceviche de daurade",
+            "ingrediants": [
+              {"type": "poisson", "nom": "daurade", "prix": 7, "saison": "été", "allergenes": "poisson"},
+              {"type": "assaisonnement", "nom": "citron vert", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cru"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Filet de boeuf",
+            "ingrediants": [
+              {"type": "viande", "nom": "boeuf", "prix": 16, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Risotto safrané",
+            "ingrediants": [
+              {"type": "céréale", "nom": "riz arborio", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "safran", "prix": 2, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "crémeux"
+          },
+          {
+            "nom": "Confit de canard",
+            "ingrediants": [
+              {"type": "viande", "nom": "canard", "prix": 15, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "mijoté"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Moelleux au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "chaud"
+          },
+          {
+            "nom": "Crème anglaise",
+            "ingrediants": [
+              {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "tiède"
+          },
+          {
+            "nom": "Tarte tatin",
+            "ingrediants": [
+              {"type": "fruit", "nom": "pomme", "prix": 4, "saison": "automne", "allergenes": "gluten"},
+              {"type": "pâtisserie", "nom": "pâte feuilletée", "prix": 3, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "chaude"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "nom_menu": "Menu Découverte",
+        "entrees": [
+          {
+            "nom": "Gaspacho andalou",
+            "ingrediants": [
+              {"type": "legume", "nom": "tomate", "prix": 4, "saison": "été", "allergenes": ""},
+              {"type": "legume", "nom": "concombre", "prix": 3, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Salade méditerranéenne",
+            "ingrediants": [
+              {"type": "legume", "nom": "olives", "prix": 3, "saison": "toute", "allergenes": ""},
+              {"type": "fruit", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Feuilleté de légumes",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "feuilleté", "prix": 3, "saison": "toute", "allergenes": "gluten"},
+              {"type": "legume", "nom": "épinard", "prix": 2, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Tajine d'agneau",
+            "ingrediants": [
+              {"type": "viande", "nom": "agneau", "prix": 16, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "cumin", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "mijoté"
+          },
+          {
+            "nom": "Paella",
+            "ingrediants": [
+              {"type": "céréale", "nom": "riz", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "poisson", "nom": "crevette", "prix": 6, "saison": "été", "allergenes": "crustacé"}
+            ],
+            "caracteristique": "mijoté"
+          },
+          {
+            "nom": "Boeuf bourguignon",
+            "ingrediants": [
+              {"type": "viande", "nom": "boeuf", "prix": 15, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "vin rouge", "prix": 5, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "mijoté"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Churros",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "farine", "prix": 3, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "chaud"
+          },
+          {
+            "nom": "Flan",
+            "ingrediants": [
+              {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Sorbet mangue",
+            "ingrediants": [
+              {"type": "fruit", "nom": "mangue", "prix": 4, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froid"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "nom_menu": "Menu Saveur",
+        "entrees": [
+          {
+            "nom": "Salade de tomates",
+            "ingrediants": [
+              {"type": "fruit", "nom": "tomate", "prix": 3, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Ceviche de crevettes",
+            "ingrediants": [
+              {"type": "poisson", "nom": "crevette", "prix": 7, "saison": "été", "allergenes": "crustacé"},
+              {"type": "assaisonnement", "nom": "citron", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cru"
+          },
+          {
+            "nom": "Soupe froide de concombre",
+            "ingrediants": [
+              {"type": "legume", "nom": "concombre", "prix": 3, "saison": "été", "allergenes": ""},
+              {"type": "produit laitier", "nom": "yaourt", "prix": 2, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froide"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Saumon en croûte",
+            "ingrediants": [
+              {"type": "poisson", "nom": "saumon", "prix": 18, "saison": "toute", "allergenes": "poisson"},
+              {"type": "pâtisserie", "nom": "pâte feuilletée", "prix": 4, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Escalope de veau",
+            "ingrediants": [
+              {"type": "viande", "nom": "veau", "prix": 15, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "poêlée"
+          },
+          {
+            "nom": "Raviolis maison",
+            "ingrediants": [
+              {"type": "pâtes", "nom": "ravioli", "prix": 4, "saison": "toute", "allergenes": "gluten"},
+              {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "faits maison"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Mousse au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "aérée"
+          },
+          {
+            "nom": "Crème brûlée",
+            "ingrediants": [
+              {"type": "laitier", "nom": "crème", "prix": 6, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "froid"
+          },
+          {
+            "nom": "Tarte citron meringuée",
+            "ingrediants": [
+              {"type": "fruit", "nom": "citron", "prix": 4, "saison": "toute", "allergenes": ""},
+              {"type": "pâtisserie", "nom": "meringue", "prix": 3, "saison": "toute", "allergenes": "gluten"}
+            ],
+            "caracteristique": "tiède"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "nom_menu": "Menu Convivial",
+        "entrees": [
+          {
+            "nom": "Planche de charcuterie",
+            "ingrediants": [
+              {"type": "viande", "nom": "jambon", "prix": 6, "saison": "toute", "allergenes": ""},
+              {"type": "viande", "nom": "saucisson", "prix": 5, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "à partager"
+          },
+          {
+            "nom": "Salade verte",
+            "ingrediants": [
+              {"type": "legume", "nom": "laitue", "prix": 3, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Crudités",
+            "ingrediants": [
+              {"type": "legume", "nom": "carotte", "prix": 2, "saison": "été", "allergenes": ""},
+              {"type": "legume", "nom": "concombre", "prix": 2, "saison": "été", "allergenes": ""}
+            ],
+            "caracteristique": "fraîche"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Rôti de porc",
+            "ingrediants": [
+              {"type": "viande", "nom": "porc", "prix": 14, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "herbes de Provence", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "rôti"
+          },
+          {
+            "nom": "Saucisses grillées",
+            "ingrediants": [
+              {"type": "viande", "nom": "saucisse", "prix": 8, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillées"
+          },
+          {
+            "nom": "Côtelettes d'agneau",
+            "ingrediants": [
+              {"type": "viande", "nom": "agneau", "prix": 16, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "romarin", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillées"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Tarte aux fruits",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "pâte sablée", "prix": 4, "saison": "toute", "allergenes": "gluten"},
+              {"type": "fruit", "nom": "fruits variés", "prix": 3, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "tiède"
+          },
+          {
+            "nom": "Mousse au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "aérée"
+          },
+          {
+            "nom": "Yaourt aux fruits",
+            "ingrediants": [
+              {"type": "lacté", "nom": "yaourt", "prix": 4, "saison": "hiver", "allergenes": "lactose"},
+              {"type": "fruit", "nom": "fraise", "prix": 2, "saison": "printemps", "allergenes": ""}
+            ],
+            "caracteristique": "froid"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "nom_menu": "Menu Prestige",
+        "entrees": [
+          {
+            "nom": "Foie gras poêlé",
+            "ingrediants": [
+              {"type": "viande", "nom": "foie gras", "prix": 12, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "chaude"
+          },
+          {
+            "nom": "Salade d'endives",
+            "ingrediants": [
+              {"type": "legume", "nom": "endive", "prix": 4, "saison": "hiver", "allergenes": ""}
+            ],
+            "caracteristique": "froide"
+          },
+          {
+            "nom": "Terrine de campagne",
+            "ingrediants": [
+              {"type": "viande", "nom": "porc", "prix": 10, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "épices", "prix": 2, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "frais"
+          }
+        ],
+        "plats": [
+          {
+            "nom": "Homard thermidor",
+            "ingrediants": [
+              {"type": "fruit de mer", "nom": "homard", "prix": 25, "saison": "toute", "allergenes": "crustacé"},
+              {"type": "assaisonnement", "nom": "moutarde", "prix": 2, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Magret de canard",
+            "ingrediants": [
+              {"type": "viande", "nom": "canard", "prix": 18, "saison": "hiver", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "grillé"
+          },
+          {
+            "nom": "Filet mignon de veau",
+            "ingrediants": [
+              {"type": "viande", "nom": "veau", "prix": 20, "saison": "toute", "allergenes": ""},
+              {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
+            ],
+            "caracteristique": "cuit"
+          }
+        ],
+        "desserts": [
+          {
+            "nom": "Soufflé au chocolat",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "chocolat", "prix": 6, "saison": "toute", "allergenes": "gluten, lactose"}
+            ],
+            "caracteristique": "léger"
+          },
+          {
+            "nom": "Paris-Brest",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "pâte à choux", "prix": 5, "saison": "toute", "allergenes": "gluten"},
+              {"type": "produit laitier", "nom": "crème pralinée", "prix": 4, "saison": "toute", "allergenes": "lactose"}
+            ],
+            "caracteristique": "moelleux"
+          },
+          {
+            "nom": "Macarons assortis",
+            "ingrediants": [
+              {"type": "pâtisserie", "nom": "amande", "prix": 4, "saison": "toute", "allergenes": "fruit à coque"}
+            ],
+            "caracteristique": "croquant"
+          }
+        ]
+      }
+    ]
+  }
+  
