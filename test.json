@@ -6,21 +6,21 @@
         "entrees": [
           {
             "nom": "Salade de carottes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "carotte", "prix": 5, "saison": "été", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Velouté de champignons",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "champignon", "prix": 6, "saison": "automne", "allergenes": ""}
             ],
             "caracteristique": "chaude"
           },
           {
             "nom": "Terrine de légumes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "courgette", "prix": 7, "saison": "printemps", "allergenes": ""}
             ],
             "caracteristique": "froide"
@@ -29,7 +29,7 @@
         "plats": [
           {
             "nom": "Steak de boeuf",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "boeuf", "prix": 15, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -37,7 +37,7 @@
           },
           {
             "nom": "Poulet pané",
-            "ingrediants": [
+            "ingredients": [
               {"type": "volaille", "nom": "poulet", "prix": 12, "saison": "toute", "allergenes": "gluten"},
               {"type": "céréale", "nom": "chapelure", "prix": 2, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -45,7 +45,7 @@
           },
           {
             "nom": "Filet de saumon",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "saumon", "prix": 18, "saison": "toute", "allergenes": "poisson"},
               {"type": "assaisonnement", "nom": "citron", "prix": 2, "saison": "toute", "allergenes": ""}
             ],
@@ -55,14 +55,14 @@
         "desserts": [
           {
             "nom": "Yaourt nature",
-            "ingrediants": [
+            "ingredients": [
               {"type": "lacté", "nom": "yaourt", "prix": 4, "saison": "hiver", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Fondant au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 6, "saison": "toute", "allergenes": "gluten, lactose"},
               {"type": "produit laitier", "nom": "beurre", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -70,7 +70,7 @@
           },
           {
             "nom": "Tarte aux pommes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "pomme", "prix": 5, "saison": "automne", "allergenes": "gluten"},
               {"type": "pâtisserie", "nom": "pâte brisée", "prix": 4, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -84,21 +84,21 @@
         "entrees": [
           {
             "nom": "Soupe à l'oignon",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "oignon", "prix": 5, "saison": "hiver", "allergenes": ""}
             ],
             "caracteristique": "chaude"
           },
           {
             "nom": "Salade de betteraves",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "betterave", "prix": 4, "saison": "automne", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Œufs mimosa",
-            "ingrediants": [
+            "ingredients": [
               {"type": "oeuf", "nom": "œuf", "prix": 3, "saison": "toute", "allergenes": "oeuf"}
             ],
             "caracteristique": "froide"
@@ -107,7 +107,7 @@
         "plats": [
           {
             "nom": "Coq au vin",
-            "ingrediants": [
+            "ingredients": [
               {"type": "volaille", "nom": "coq", "prix": 14, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "vin rouge", "prix": 5, "saison": "toute", "allergenes": ""}
             ],
@@ -115,7 +115,7 @@
           },
           {
             "nom": "Gratin dauphinois",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "crème fraîche", "prix": 6, "saison": "toute", "allergenes": "lactose"},
               {"type": "legume", "nom": "pomme de terre", "prix": 4, "saison": "toute", "allergenes": ""}
             ],
@@ -123,7 +123,7 @@
           },
           {
             "nom": "Cabillaud rôti",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "cabillaud", "prix": 17, "saison": "toute", "allergenes": "poisson"},
               {"type": "assaisonnement", "nom": "ail", "prix": 2, "saison": "toute", "allergenes": ""}
             ],
@@ -133,21 +133,21 @@
         "desserts": [
           {
             "nom": "Crème brûlée",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "crème", "prix": 6, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Mousse au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Île flottante",
-            "ingrediants": [
+            "ingredients": [
               {"type": "oeuf", "nom": "œuf", "prix": 3, "saison": "toute", "allergenes": "oeuf"}
             ],
             "caracteristique": "froid"
@@ -160,7 +160,7 @@
         "entrees": [
           {
             "nom": "Wrap de légumes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "laitue", "prix": 3, "saison": "toute", "allergenes": ""},
               {"type": "legume", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
             ],
@@ -168,7 +168,7 @@
           },
           {
             "nom": "Toast avocat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "avocat", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "céréale", "nom": "pain complet", "prix": 2, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -176,7 +176,7 @@
           },
           {
             "nom": "Mini quiches",
-            "ingrediants": [
+            "ingredients": [
               {"type": "produit laitier", "nom": "crème", "prix": 2, "saison": "toute", "allergenes": "lactose"},
               {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
             ],
@@ -186,7 +186,7 @@
         "plats": [
           {
             "nom": "Burger de poulet",
-            "ingrediants": [
+            "ingredients": [
               {"type": "volaille", "nom": "poulet", "prix": 10, "saison": "toute", "allergenes": ""},
               {"type": "céréale", "nom": "pain burger", "prix": 3, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -194,7 +194,7 @@
           },
           {
             "nom": "Pizza margherita",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "pâte à pizza", "prix": 4, "saison": "toute", "allergenes": "gluten"},
               {"type": "produit laitier", "nom": "mozzarella", "prix": 5, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -202,7 +202,7 @@
           },
           {
             "nom": "Pâtes carbonara",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtes", "nom": "spaghetti", "prix": 4, "saison": "toute", "allergenes": "gluten"},
               {"type": "produit laitier", "nom": "crème", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -212,21 +212,21 @@
         "desserts": [
           {
             "nom": "Glace vanille",
-            "ingrediants": [
+            "ingredients": [
               {"type": "lacté", "nom": "glace", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Brownie",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 4, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "chaud"
           },
           {
             "nom": "Fruit frais",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "pomme", "prix": 2, "saison": "automne", "allergenes": ""}
             ],
             "caracteristique": "frais"
@@ -239,7 +239,7 @@
         "entrees": [
           {
             "nom": "Tartare de saumon",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "saumon", "prix": 8, "saison": "toute", "allergenes": "poisson"},
               {"type": "assaisonnement", "nom": "citron", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -247,7 +247,7 @@
           },
           {
             "nom": "Salade de roquette",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "roquette", "prix": 4, "saison": "printemps", "allergenes": ""},
               {"type": "produit laitier", "nom": "parmesan", "prix": 2, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -255,7 +255,7 @@
           },
           {
             "nom": "Bruschetta",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "baguette", "prix": 3, "saison": "toute", "allergenes": "gluten"},
               {"type": "legume", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
             ],
@@ -265,7 +265,7 @@
         "plats": [
           {
             "nom": "Risotto aux champignons",
-            "ingrediants": [
+            "ingredients": [
               {"type": "céréale", "nom": "riz arborio", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "legume", "nom": "champignon", "prix": 5, "saison": "automne", "allergenes": ""}
             ],
@@ -273,7 +273,7 @@
           },
           {
             "nom": "Magret de canard",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "canard", "prix": 16, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -281,7 +281,7 @@
           },
           {
             "nom": "Filet mignon",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "porc", "prix": 15, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -291,21 +291,21 @@
         "desserts": [
           {
             "nom": "Tiramisu",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "mascarpone", "prix": 5, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Crème caramel",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Macarons",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "amande", "prix": 4, "saison": "toute", "allergenes": "fruit à coque"}
             ],
             "caracteristique": "sec"
@@ -318,7 +318,7 @@
         "entrees": [
           {
             "nom": "Salade de quinoa",
-            "ingrediants": [
+            "ingredients": [
               {"type": "céréale", "nom": "quinoa", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "legume", "nom": "concombre", "prix": 2, "saison": "été", "allergenes": ""}
             ],
@@ -326,7 +326,7 @@
           },
           {
             "nom": "Soupe de légumes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "carotte", "prix": 3, "saison": "hiver", "allergenes": ""},
               {"type": "legume", "nom": "poireau", "prix": 3, "saison": "hiver", "allergenes": ""}
             ],
@@ -334,7 +334,7 @@
           },
           {
             "nom": "Carpaccio de betterave",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "betterave", "prix": 4, "saison": "automne", "allergenes": ""}
             ],
             "caracteristique": "cru"
@@ -343,7 +343,7 @@
         "plats": [
           {
             "nom": "Lasagne végétarienne",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtes", "nom": "feuilles de lasagne", "prix": 4, "saison": "toute", "allergenes": "gluten"},
               {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
             ],
@@ -351,7 +351,7 @@
           },
           {
             "nom": "Burger végétarien",
-            "ingrediants": [
+            "ingredients": [
               {"type": "légumineuse", "nom": "lentilles", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "céréale", "nom": "pain burger", "prix": 3, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -359,7 +359,7 @@
           },
           {
             "nom": "Gratin de courgettes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "courgette", "prix": 3, "saison": "été", "allergenes": ""},
               {"type": "laitier", "nom": "crème", "prix": 2, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -369,21 +369,21 @@
         "desserts": [
           {
             "nom": "Salade de fruits",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "melon", "prix": 3, "saison": "été", "allergenes": ""}
             ],
             "caracteristique": "frais"
           },
           {
             "nom": "Sorbet citron",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "citron", "prix": 3, "saison": "toute", "allergenes": ""}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Panna cotta végétale",
-            "ingrediants": [
+            "ingredients": [
               {"type": "produit végétal", "nom": "lait d'amande", "prix": 4, "saison": "toute", "allergenes": "amande"}
             ],
             "caracteristique": "crémeux"
@@ -396,21 +396,21 @@
         "entrees": [
           {
             "nom": "Velouté de potimarron",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "potimarron", "prix": 5, "saison": "automne", "allergenes": ""}
             ],
             "caracteristique": "chaude"
           },
           {
             "nom": "Salade de mâche",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "mâche", "prix": 4, "saison": "printemps", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Ceviche de daurade",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "daurade", "prix": 7, "saison": "été", "allergenes": "poisson"},
               {"type": "assaisonnement", "nom": "citron vert", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -420,7 +420,7 @@
         "plats": [
           {
             "nom": "Filet de boeuf",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "boeuf", "prix": 16, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -428,7 +428,7 @@
           },
           {
             "nom": "Risotto safrané",
-            "ingrediants": [
+            "ingredients": [
               {"type": "céréale", "nom": "riz arborio", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "safran", "prix": 2, "saison": "toute", "allergenes": ""}
             ],
@@ -436,7 +436,7 @@
           },
           {
             "nom": "Confit de canard",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "canard", "prix": 15, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -446,21 +446,21 @@
         "desserts": [
           {
             "nom": "Moelleux au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "chaud"
           },
           {
             "nom": "Crème anglaise",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "tiède"
           },
           {
             "nom": "Tarte tatin",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "pomme", "prix": 4, "saison": "automne", "allergenes": "gluten"},
               {"type": "pâtisserie", "nom": "pâte feuilletée", "prix": 3, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -474,7 +474,7 @@
         "entrees": [
           {
             "nom": "Gaspacho andalou",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "tomate", "prix": 4, "saison": "été", "allergenes": ""},
               {"type": "legume", "nom": "concombre", "prix": 3, "saison": "été", "allergenes": ""}
             ],
@@ -482,7 +482,7 @@
           },
           {
             "nom": "Salade méditerranéenne",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "olives", "prix": 3, "saison": "toute", "allergenes": ""},
               {"type": "fruit", "nom": "tomate", "prix": 2, "saison": "été", "allergenes": ""}
             ],
@@ -490,7 +490,7 @@
           },
           {
             "nom": "Feuilleté de légumes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "feuilleté", "prix": 3, "saison": "toute", "allergenes": "gluten"},
               {"type": "legume", "nom": "épinard", "prix": 2, "saison": "printemps", "allergenes": ""}
             ],
@@ -500,7 +500,7 @@
         "plats": [
           {
             "nom": "Tajine d'agneau",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "agneau", "prix": 16, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "cumin", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -508,7 +508,7 @@
           },
           {
             "nom": "Paella",
-            "ingrediants": [
+            "ingredients": [
               {"type": "céréale", "nom": "riz", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "poisson", "nom": "crevette", "prix": 6, "saison": "été", "allergenes": "crustacé"}
             ],
@@ -516,7 +516,7 @@
           },
           {
             "nom": "Boeuf bourguignon",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "boeuf", "prix": 15, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "vin rouge", "prix": 5, "saison": "toute", "allergenes": ""}
             ],
@@ -526,21 +526,21 @@
         "desserts": [
           {
             "nom": "Churros",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "farine", "prix": 3, "saison": "toute", "allergenes": "gluten"}
             ],
             "caracteristique": "chaud"
           },
           {
             "nom": "Flan",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "lait", "prix": 3, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Sorbet mangue",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "mangue", "prix": 4, "saison": "été", "allergenes": ""}
             ],
             "caracteristique": "froid"
@@ -553,14 +553,14 @@
         "entrees": [
           {
             "nom": "Salade de tomates",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "tomate", "prix": 3, "saison": "été", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Ceviche de crevettes",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "crevette", "prix": 7, "saison": "été", "allergenes": "crustacé"},
               {"type": "assaisonnement", "nom": "citron", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -568,7 +568,7 @@
           },
           {
             "nom": "Soupe froide de concombre",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "concombre", "prix": 3, "saison": "été", "allergenes": ""},
               {"type": "produit laitier", "nom": "yaourt", "prix": 2, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -578,7 +578,7 @@
         "plats": [
           {
             "nom": "Saumon en croûte",
-            "ingrediants": [
+            "ingredients": [
               {"type": "poisson", "nom": "saumon", "prix": 18, "saison": "toute", "allergenes": "poisson"},
               {"type": "pâtisserie", "nom": "pâte feuilletée", "prix": 4, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -586,7 +586,7 @@
           },
           {
             "nom": "Escalope de veau",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "veau", "prix": 15, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -594,7 +594,7 @@
           },
           {
             "nom": "Raviolis maison",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtes", "nom": "ravioli", "prix": 4, "saison": "toute", "allergenes": "gluten"},
               {"type": "legume", "nom": "épinard", "prix": 3, "saison": "printemps", "allergenes": ""}
             ],
@@ -604,21 +604,21 @@
         "desserts": [
           {
             "nom": "Mousse au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "aérée"
           },
           {
             "nom": "Crème brûlée",
-            "ingrediants": [
+            "ingredients": [
               {"type": "laitier", "nom": "crème", "prix": 6, "saison": "toute", "allergenes": "lactose"}
             ],
             "caracteristique": "froid"
           },
           {
             "nom": "Tarte citron meringuée",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit", "nom": "citron", "prix": 4, "saison": "toute", "allergenes": ""},
               {"type": "pâtisserie", "nom": "meringue", "prix": 3, "saison": "toute", "allergenes": "gluten"}
             ],
@@ -632,7 +632,7 @@
         "entrees": [
           {
             "nom": "Planche de charcuterie",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "jambon", "prix": 6, "saison": "toute", "allergenes": ""},
               {"type": "viande", "nom": "saucisson", "prix": 5, "saison": "toute", "allergenes": ""}
             ],
@@ -640,14 +640,14 @@
           },
           {
             "nom": "Salade verte",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "laitue", "prix": 3, "saison": "été", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Crudités",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "carotte", "prix": 2, "saison": "été", "allergenes": ""},
               {"type": "legume", "nom": "concombre", "prix": 2, "saison": "été", "allergenes": ""}
             ],
@@ -657,7 +657,7 @@
         "plats": [
           {
             "nom": "Rôti de porc",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "porc", "prix": 14, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "herbes de Provence", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -665,7 +665,7 @@
           },
           {
             "nom": "Saucisses grillées",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "saucisse", "prix": 8, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -673,7 +673,7 @@
           },
           {
             "nom": "Côtelettes d'agneau",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "agneau", "prix": 16, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "romarin", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -683,7 +683,7 @@
         "desserts": [
           {
             "nom": "Tarte aux fruits",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "pâte sablée", "prix": 4, "saison": "toute", "allergenes": "gluten"},
               {"type": "fruit", "nom": "fruits variés", "prix": 3, "saison": "toute", "allergenes": ""}
             ],
@@ -691,14 +691,14 @@
           },
           {
             "nom": "Mousse au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 5, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "aérée"
           },
           {
             "nom": "Yaourt aux fruits",
-            "ingrediants": [
+            "ingredients": [
               {"type": "lacté", "nom": "yaourt", "prix": 4, "saison": "hiver", "allergenes": "lactose"},
               {"type": "fruit", "nom": "fraise", "prix": 2, "saison": "printemps", "allergenes": ""}
             ],
@@ -712,7 +712,7 @@
         "entrees": [
           {
             "nom": "Foie gras poêlé",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "foie gras", "prix": 12, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "sel", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -720,14 +720,14 @@
           },
           {
             "nom": "Salade d'endives",
-            "ingrediants": [
+            "ingredients": [
               {"type": "legume", "nom": "endive", "prix": 4, "saison": "hiver", "allergenes": ""}
             ],
             "caracteristique": "froide"
           },
           {
             "nom": "Terrine de campagne",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "porc", "prix": 10, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "épices", "prix": 2, "saison": "toute", "allergenes": ""}
             ],
@@ -737,7 +737,7 @@
         "plats": [
           {
             "nom": "Homard thermidor",
-            "ingrediants": [
+            "ingredients": [
               {"type": "fruit de mer", "nom": "homard", "prix": 25, "saison": "toute", "allergenes": "crustacé"},
               {"type": "assaisonnement", "nom": "moutarde", "prix": 2, "saison": "toute", "allergenes": ""}
             ],
@@ -745,7 +745,7 @@
           },
           {
             "nom": "Magret de canard",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "canard", "prix": 18, "saison": "hiver", "allergenes": ""},
               {"type": "assaisonnement", "nom": "poivre", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -753,7 +753,7 @@
           },
           {
             "nom": "Filet mignon de veau",
-            "ingrediants": [
+            "ingredients": [
               {"type": "viande", "nom": "veau", "prix": 20, "saison": "toute", "allergenes": ""},
               {"type": "assaisonnement", "nom": "herbes", "prix": 1, "saison": "toute", "allergenes": ""}
             ],
@@ -763,14 +763,14 @@
         "desserts": [
           {
             "nom": "Soufflé au chocolat",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "chocolat", "prix": 6, "saison": "toute", "allergenes": "gluten, lactose"}
             ],
             "caracteristique": "léger"
           },
           {
             "nom": "Paris-Brest",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "pâte à choux", "prix": 5, "saison": "toute", "allergenes": "gluten"},
               {"type": "produit laitier", "nom": "crème pralinée", "prix": 4, "saison": "toute", "allergenes": "lactose"}
             ],
@@ -778,7 +778,7 @@
           },
           {
             "nom": "Macarons assortis",
-            "ingrediants": [
+            "ingredients": [
               {"type": "pâtisserie", "nom": "amande", "prix": 4, "saison": "toute", "allergenes": "fruit à coque"}
             ],
             "caracteristique": "croquant"
