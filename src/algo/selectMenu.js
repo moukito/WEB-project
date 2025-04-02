@@ -117,7 +117,7 @@ function elementsNonVides(elements) {
 
 function menuParSaison(saison, menu){
 /* Filtrer les entrées, les plats et les dessert par saison */
-  function filtrerParSaison(elements) {
+  const filtrerParSaison = elements => {
     /* Vérifier que tous les ingrédients de l'élément sont de la bonne saison */
     if (!elementsNonVides(elements)) {
       return [];
@@ -126,14 +126,12 @@ function menuParSaison(saison, menu){
             ingredient.saison === saison || ingredient.saison === "toute")));
   };
 
-  const menuFiltre = {
+  return {
     ...menu,
     entrees: filtrerParSaison(menu.entrees),
     plats: filtrerParSaison(menu.plats),
     desserts: filtrerParSaison(menu.desserts)
   };
-
-  return menuFiltre;
 }
 
 console.log("Menu filtré par saison:")
