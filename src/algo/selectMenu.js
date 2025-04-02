@@ -115,24 +115,23 @@ function estUnMenuComplet(menu) {
       menu.plats && menu.plats.length > 0 && 
       menu.desserts && menu.desserts.length > 0;
   }
-        
+
+console.log("Le menu est complet:", estUnMenuComplet(menu));
 
 function menuParSaison(saison, menu){
 /* Filtrer les entrées, les plats et les dessert par saison */
-  function filtrerParSaison(elements) {
+  const filtrerParSaison = elements => {
     /* Vérifier que tous les ingrédients de l'élément sont de la bonne saison */
-    return elements.filter(element => (element.ingredients.every(ingredient => 
+    return elements.filter(element => (element.ingredients.every(ingredient =>
             ingredient.saison === saison || ingredient.saison === "toute")));
   };
 
-  const menuFiltre = {
+  return {
     ...menu,
     entrees: filtrerParSaison(menu.entrees),
     plats: filtrerParSaison(menu.plats),
     desserts: filtrerParSaison(menu.desserts)
   };
-
-  return menuFiltre;
 }
 
 console.log("Menu filtré par saison:")
@@ -140,18 +139,19 @@ console.log(menuParSaison("hiver", menu))
 
 function menuParPrix(prixMax, menu) {
 /* Filtrer les entrées, les plats et les dessert par prix */
-  function filtrerParPrix(elements) {
+  const filtrerParPrix = elements => {
     /* Vérifier que tous les ingrédients de l'élément sont de la bonne saison */
-    return elements.filter(element => (element.ingredients.every(ingredient => 
+    return elements.filter(element => (element.ingredients.every(ingredient =>
             ingredient.prix <= prixMax)));
   };
 
-  const menuFiltre = {
+  return {
     ...menu,
     entrees: filtrerParPrix(menu.entrees),
     plats: filtrerParPrix(menu.plats),
     desserts: filtrerParPrix(menu.desserts)
   };
-
-  return menuFiltre;
 }
+
+console.log("Menu filtré par prix:");
+console.log(menuParPrix(10, menu));
