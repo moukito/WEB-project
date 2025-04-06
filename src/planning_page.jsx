@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 
-const getSaisonFromDate = (dateString) => {
+/**
+ * Determines the season based on a given date
+ * @param {string} dateString - Date in ISO format
+ * @returns {string} The season in French ("printemps", "été", "automne", "hiver")
+ */
+const getSeasonFromDate = (dateString) => {
 	const date = new Date(dateString);
-	const mois = date.getMonth();
-	const jour = date.getDate();
+	const month = date.getMonth();
+	const day = date.getDate();
 
-	if ((mois === 2 && jour >= 20) || mois === 3 || mois === 4 || (mois === 5 && jour <= 20)) {
+	if ((month === 2 && day >= 20) || month === 3 || month === 4 || (month === 5 && day <= 20)) {
 		return "printemps";
 	}
-	else if ((mois === 5 && jour >= 21) || mois === 6 || mois === 7 || (mois === 8 && jour <= 22)) {
+	else if ((month === 5 && day >= 21) || month === 6 || month === 7 || (month === 8 && day <= 22)) {
 		return "été";
 	}
-	else if ((mois === 8 && jour >= 23) || mois === 9 || mois === 10 || (mois === 11 && jour <= 20)) {
+	else if ((month === 8 && day >= 23) || month === 9 || month === 10 || (month === 11 && day <= 20)) {
 		return "automne";
 	}
 	else {
@@ -19,10 +24,21 @@ const getSaisonFromDate = (dateString) => {
 	}
 };
 
+/**
+ * Form component for planning parameters
+ * @param {Object} props - Component props
+ * @param {string} props.startDate - Starting date for the planning
+ * @param {Function} props.setStartDate - Function to update start date
+ * @param {string} props.numberOfWeeks - Number of weeks for planning
+ * @param {Function} props.setNumberOfWeeks - Function to update number of weeks
+ * @param {string} props.season - Selected season
+ * @param {Function} props.setSeason - Function to update season
+ * @param {Object} props.errors - Form validation errors
+ */
 const PlanningForm = ({
-	                      dateDebut, setDateDebut,
-	                      nombreSemaines, setNombreSemaines,
-	                      saison, setSaison,
+	                      startDate, setStartDate,
+	                      numberOfWeeks, setNumberOfWeeks,
+	                      season, setSeason,
 	                      errors
                       }) => (
 	<div className="w-full max-w-4xl bg-white p-6 rounded-xl shadow-xl mb-6">
@@ -31,22 +47,22 @@ const PlanningForm = ({
 				<label className="block text-gray-900 font-medium mb-2">Date de début</label>
 				<input
 					type="date"
-					value={dateDebut}
+					value={startDate}
 					onChange={(e) => {
 						const newDate = e.target.value;
-						setDateDebut(newDate);
-						setSaison(getSaisonFromDate(newDate));
+						setStartDate(newDate);
+						setSeason(getSeasonFromDate(newDate));
 					}}
-					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.dateDebut ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
+					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.startDate ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
 				/>
-				{errors.dateDebut && <p className="text-red-500 text-sm mt-1">Date requise</p>}
+				{errors.startDate && <p className="text-red-500 text-sm mt-1">Date requise</p>}
 			</div>
 			<div>
 				<label className="block text-gray-900 font-medium mb-2">Nombre de semaines</label>
 				<select
-					value={nombreSemaines}
-					onChange={(e) => setNombreSemaines(e.target.value)}
-					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.nombreSemaines ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
+					value={numberOfWeeks}
+					onChange={(e) => setNumberOfWeeks(e.target.value)}
+					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.numberOfWeeks ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
 				>
 					{[...Array(6)].map((_, i) => (
 						<option key={i + 1} value={i + 1}>
@@ -54,36 +70,46 @@ const PlanningForm = ({
 						</option>
 					))}
 				</select>
-				{errors.nombreSemaines && <p className="text-red-500 text-sm mt-1">Nombre de semaines requis</p>}
+				{errors.numberOfWeeks && <p className="text-red-500 text-sm mt-1">Nombre de semaines requis</p>}
 			</div>
 			<div>
 				<label className="block text-gray-900 font-medium mb-2">Saison</label>
 				<select
-					value={saison}
-					onChange={(e) => setSaison(e.target.value)}
-					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.saison ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
+					value={season}
+					onChange={(e) => setSeason(e.target.value)}
+					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.season ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
 				>
 					<option value="printemps">Printemps</option>
 					<option value="été">Été</option>
 					<option value="automne">Automne</option>
 					<option value="hiver">Hiver</option>
 				</select>
-				{errors.saison && <p className="text-red-500 text-sm mt-1">Saison requise</p>}
+				{errors.season && <p className="text-red-500 text-sm mt-1">Saison requise</p>}
 			</div>
 		</div>
 	</div>
 );
 
-const PlanningGrid = ({ nombreSemaines, dateDebut }) => {
-	const nombreJours = nombreSemaines * 7 || 7;
+/**
+ * Grid component that displays planning calendar
+ * @param {Object} props - Component props
+ * @param {string} props.numberOfWeeks - Number of weeks to display
+ * @param {string} props.startDate - Starting date for the planning
+ */
+const PlanningGrid = ({ numberOfWeeks, startDate }) => {
+	const numberOfDays = numberOfWeeks * 7 || 7;
 
+	/**
+	 * Generates an array of dates starting from the startDate
+	 * @returns {Date[]} Array of dates
+	 */
 	const getDates = () => {
 		const dates = [];
-		const startDate = new Date(dateDebut);
+		const start = new Date(startDate);
 
-		for (let i = 0; i < nombreJours; i++) {
-			const currentDate = new Date(startDate);
-			currentDate.setDate(startDate.getDate() + i);
+		for (let i = 0; i < numberOfDays; i++) {
+			const currentDate = new Date(start);
+			currentDate.setDate(start.getDate() + i);
 			dates.push(currentDate);
 		}
 
@@ -91,7 +117,7 @@ const PlanningGrid = ({ nombreSemaines, dateDebut }) => {
 	};
 
 	const dates = getDates();
-	const jours = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
+	const days = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 
 	return (
 		<div className="w-full max-w-7xl bg-white p-6 rounded-xl shadow-xl">
@@ -102,7 +128,7 @@ const PlanningGrid = ({ nombreSemaines, dateDebut }) => {
 						key={index}
 						className="border border-gray-300 rounded-lg p-4 text-center bg-gray-50"
 					>
-						<p className="font-bold text-gray-900">{jours[date.getDay()]} {date.getDate()}/{date.getMonth() + 1}</p>
+						<p className="font-bold text-gray-900">{days[date.getDay()]} {date.getDate()}/{date.getMonth() + 1}</p>
 						<div className="mt-2">
 							<div className="p-2 bg-white rounded border border-gray-200 mb-1 min-h-[40px]">
 								<p className="text-sm text-gray-700">Déjeuner</p>
@@ -118,6 +144,11 @@ const PlanningGrid = ({ nombreSemaines, dateDebut }) => {
 	);
 };
 
+/**
+ * Footer component with generate button
+ * @param {Object} props - Component props
+ * @param {Function} props.onGenerate - Function to call when generate button is clicked
+ */
 const Footer = ({ onGenerate }) => (
 	<footer className="bg-gray-800 text-white text-center py-6 text-lg flex justify-center">
 		<button
@@ -129,31 +160,38 @@ const Footer = ({ onGenerate }) => (
 	</footer>
 );
 
+/**
+ * Main planning page component
+ * Manages state and renders planning interface
+ */
 const PlanningPage = () => {
-	const [dateDebut, setDateDebut] = useState(() => {
+	const [startDate, setStartDate] = useState(() => {
 		const today = new Date();
 		return today.toISOString().split('T')[0];
 	});
 
-	const [saison, setSaison] = useState(() => getSaisonFromDate(new Date().toISOString().split('T')[0]));
-	const [nombreSemaines, setNombreSemaines] = useState('1');
+	const [season, setSeason] = useState(() => getSeasonFromDate(new Date().toISOString().split('T')[0]));
+	const [numberOfWeeks, setNumberOfWeeks] = useState('1');
 	const [errors, setErrors] = useState({
-		dateDebut: false,
-		nombreSemaines: false,
-		saison: false
+		startDate: false,
+		numberOfWeeks: false,
+		season: false
 	});
 
+	/**
+	 * Validates form and generates planning if valid
+	 */
 	const handleGenerate = () => {
 		const newErrors = {
-			dateDebut: !dateDebut,
-			nombreSemaines: !nombreSemaines,
-			saison: !saison
+			startDate: !startDate,
+			numberOfWeeks: !numberOfWeeks,
+			season: !season
 		};
 
 		setErrors(newErrors);
 
-		if (!newErrors.dateDebut && !newErrors.nombreSemaines && !newErrors.saison) {
-			console.log({ saison, nombreSemaines, dateDebut });
+		if (!newErrors.startDate && !newErrors.numberOfWeeks && !newErrors.season) {
+			console.log({ season, numberOfWeeks, startDate });
 		}
 	};
 
@@ -161,16 +199,16 @@ const PlanningPage = () => {
 		<div className="min-h-screen flex flex-col bg-gray-100">
 			<main className="flex-grow py-10 px-6 flex flex-col items-center">
 				<PlanningForm
-					dateDebut={dateDebut}
-					setDateDebut={setDateDebut}
-					nombreSemaines={nombreSemaines}
-					setNombreSemaines={setNombreSemaines}
-					saison={saison}
-					setSaison={setSaison}
+					startDate={startDate}
+					setStartDate={setStartDate}
+					numberOfWeeks={numberOfWeeks}
+					setNumberOfWeeks={setNumberOfWeeks}
+					season={season}
+					setSeason={setSeason}
 					errors={errors}
 				/>
 
-				<PlanningGrid nombreSemaines={nombreSemaines} dateDebut={dateDebut} />
+				<PlanningGrid numberOfWeeks={numberOfWeeks} startDate={startDate} />
 			</main>
 
 			<Footer onGenerate={handleGenerate} />
@@ -179,4 +217,3 @@ const PlanningPage = () => {
 };
 
 export default PlanningPage;
-
