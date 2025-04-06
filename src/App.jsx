@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Menu from "./pageMenu.jsx";
 import Header from "./HeaderPlat";
 import PageAccueil from "./PageAccueil.jsx"
-import Planning from "./planning_page.jsx"
+import Planning from "./pages/generatePlanning.jsx"
 
 const App = () => {
   return (
