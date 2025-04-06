@@ -21,7 +21,7 @@ const RepasCard = ({ jour, type, openModal }) => (
   <div
     className={`p-4 rounded-lg cursor-pointer hover:shadow-md transition ${
       type === 'midi' ? 'bg-blue-100' : 'bg-yellow-100'
-    } w-full`}
+    } w-full min-h-[120px] flex flex-col justify-center`}
     onClick={() => openModal(jour, type)}
   >
     <h3 className="text-xl font-medium text-black text-center">{type === 'midi' ? 'Midi' : 'Soir'}</h3>
@@ -38,7 +38,7 @@ const RepasCard = ({ jour, type, openModal }) => (
 );
 
 const FutureCard = () => (
-  <div className="p-4 rounded-lg bg-gray-200 w-full">
+  <div className="p-6 rounded-lg bg-gray-200 w-full flex items-center justify-center min-h-[200px]">
     <p className="text-black text-center italic">Menu pas encore publié</p>
   </div>
 );
@@ -93,28 +93,35 @@ const PageAccueil = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-100">
-      <header className="bg-gray-800 text-white text-center py-6 text-3xl font-bold">
-        Planning des repas
+      <header className="bg-gray-800 text-white text-center py-6 text-3xl font-bold relative">
+        Plan alimentaire des menus
       </header>
 
-      <main className="flex-grow py-10 px-6">
-        <div className="w-full max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-10 text-black">Semaine à venir</h1>
-          
-          <div className="flex items-center justify-center">
-            <div className="mr-4">
-              <button 
-                onClick={goToPreviousCards} 
-                className="px-4 py-2 rounded bg-gray-500 text-white hover:bg-gray-600 cursor-pointer transition"
-              >
-                Précédent
-              </button>
-            </div>
-            
+      <main className="flex-grow py-28 px-6">
+        <div className="absolute right-4 top-1/4 transform -translate-y-1/2 flex space-x-2">
+            <button 
+              onClick={goToPreviousCards} 
+              className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-gray-700 cursor-pointer transition"
+            >
+              Jours précédents
+            </button>
+            <button 
+              onClick={goToNextCards} 
+              className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-gray-700 cursor-pointer transition"
+            >
+              Jours suivants
+            </button>
+        </div>
+        <div className="w-full max-w-7xl mx-auto">  
+          <div className="flex justify-center">
             <div className="flex space-x-8">
               {visiblePlanning.map((jour, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-xl text-center w-80 flex-shrink-0">
-                  <h2 className="text-2xl font-semibold mb-4 text-gray-700">{jour.jour}</h2>
+                <div 
+                  key={index} 
+                  className="bg-white p-6 rounded-xl shadow-xl text-center w-[300px] flex-shrink-0 flex flex-col"
+                >
+                <h2 className="text-2xl font-semibold mb-4 text-gray-700">{jour.jour}</h2>
+                <div className="flex-grow">
                   {jour.isFuture ? (
                     <FutureCard />
                   ) : (
@@ -130,16 +137,8 @@ const PageAccueil = () => {
                     </div>
                   )}
                 </div>
+                </div>
               ))}
-            </div>
-            
-            <div className="ml-4">
-              <button 
-                onClick={goToNextCards} 
-                className="px-4 py-2 rounded bg-gray-500 text-white hover:bg-gray-600 cursor-pointer transition"
-              >
-                Suivant
-              </button>
             </div>
           </div>
         </div>
