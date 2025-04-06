@@ -48,7 +48,6 @@ const PlanningForm = ({
 					onChange={(e) => setNombreSemaines(e.target.value)}
 					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.nombreSemaines ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
 				>
-					<option value="">Sélectionnez</option>
 					{[...Array(6)].map((_, i) => (
 						<option key={i + 1} value={i + 1}>
 							{i + 1} semaine{i > 0 ? 's' : ''}
@@ -64,7 +63,6 @@ const PlanningForm = ({
 					onChange={(e) => setSaison(e.target.value)}
 					className={`w-full border rounded-lg p-2 text-gray-900 ${errors.saison ? 'border-red-500 bg-red-50' : 'border-gray-300'}`}
 				>
-					<option value="">Sélectionnez une saison</option>
 					<option value="printemps">Printemps</option>
 					<option value="été">Été</option>
 					<option value="automne">Automne</option>
@@ -138,7 +136,7 @@ const PlanningPage = () => {
 	});
 
 	const [saison, setSaison] = useState(() => getSaisonFromDate(new Date().toISOString().split('T')[0]));
-	const [nombreSemaines, setNombreSemaines] = useState('');
+	const [nombreSemaines, setNombreSemaines] = useState('1');
 	const [errors, setErrors] = useState({
 		dateDebut: false,
 		nombreSemaines: false,
