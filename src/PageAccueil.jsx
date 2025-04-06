@@ -37,7 +37,6 @@ const RepasCard = ({ jour, type, openModal }) => (
 
 const PageAccueil = () => {
   const navigate = useNavigate();
-  // On enrichit le tableau menusSemaine avec une propriété "jour" calculée dynamiquement
   const planning = menusSemaine.map((menu, i) => ({
     ...menu,
     jour: getDate(i),
@@ -45,15 +44,27 @@ const PageAccueil = () => {
 
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [mealType, setMealType] = useState(null);
+  const [currentDayIndex, setCurrentDayIndex] = useState(null);
 
   const openModal = (jour, type) => {
+    const index = planning.findIndex(item => item.jour === jour);
     setSelectedMeal(jour);
     setMealType(type);
+    setCurrentDayIndex(index);
   };
 
   const closeModal = () => {
     setSelectedMeal(null);
     setMealType(null);
+    setCurrentDayIndex(null);
+  };
+
+  const navigateDay = (direction) => {
+    const newIndex = currentDayIndex + direction;
+    if (newIndex >= 0 && newIndex < planning.length) {
+      setCurrentDayIndex(newIndex);
+      setSelectedMeal(planning[newIndex].jour);
+    }
   };
 
   return (
@@ -81,9 +92,9 @@ const PageAccueil = () => {
       </main>
 
       {selectedMeal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-black">
-            <h2 className="text-2xl font-bold mb-4">{selectedMeal.jour} - {mealType === 'midi' ? 'Midi' : 'Soir'}</h2>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center transition-transform duration-500 transform">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-black transform transition-transform duration-500">
+            <h2 className="text-2xl font-bold mb-4">{selectedMeal} - {mealType === 'midi' ? 'Midi' : 'Soir'}</h2>
             {selectedMeal[mealType] ? (
               <>
                 <p><strong>Allergènes :</strong> {selectedMeal[mealType].allergenes.length > 0 ? selectedMeal[mealType].allergenes.join(', ') : 'Aucun'}</p>
@@ -94,15 +105,14 @@ const PageAccueil = () => {
             )}
             <div className="flex justify-between mt-4">
               <button onClick={closeModal} className="bg-gray-500 text-white px-4 py-2 rounded">Fermer</button>
-              <button onClick={() => {navigate("/menu")}} className="bg-gray-500 text-white px-4 py-2 rounded">Modifier</button>
+              <div className="flex gap-4">
+                <button onClick={() => navigateDay(-1)} disabled={currentDayIndex === 0} className="bg-gray-500 text-white px-4 py-2 rounded">Jour précédent</button>
+                <button onClick={() => navigateDay(1)} disabled={currentDayIndex === planning.length - 1} className="bg-gray-500 text-white px-4 py-2 rounded">Jour suivant</button>
+              </div>
             </div>
           </div>
         </div>
       )}
-    
-      {/* <footer className="bg-gray-800 text-white text-center py-6 text-lg">
-        © {new Date().getFullYear()} - Tous droits réservés
-      </footer> */}
     </div>
   );
 };
