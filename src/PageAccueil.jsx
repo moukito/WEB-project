@@ -83,6 +83,11 @@ const PageAccueil = () => {
     setMealType(null);
   };
 
+  const goToTodaysCards = () => {
+    const todayIndex = menusSemaine.findIndex((_, index) => index === 0);
+    setStartIndex(todayIndex);
+  }
+
   const goToPreviousCards = () => {
     setStartIndex(prev => Math.max(0, prev - cardsToShow));
   };
@@ -101,13 +106,19 @@ const PageAccueil = () => {
         <div className="absolute right-4 top-1/4 transform -translate-y-1/2 flex space-x-2">
             <button 
               onClick={goToPreviousCards} 
-              className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-gray-700 cursor-pointer transition"
+              className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer transition"
             >
               Jours précédents
             </button>
+            <button
+              onClick={goToTodaysCards}
+              className="px-2 py-2 rounded bg-orange-500 text-white hover:bg-orange-700 cursor-pointer transition" 
+            >
+              Aujourd'hui
+            </button>
             <button 
               onClick={goToNextCards} 
-              className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-gray-700 cursor-pointer transition"
+              className="px-4 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer transition"
             >
               Jours suivants
             </button>
