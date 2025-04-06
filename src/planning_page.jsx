@@ -106,10 +106,10 @@ const PlanningGrid = ({ nombreSemaines, dateDebut }) => {
             <p className="font-bold text-gray-900">{jours[date.getDay()]} {date.getDate()}/{date.getMonth() + 1}</p>
             <div className="mt-2">
               <div className="p-2 bg-white rounded border border-gray-200 mb-1 min-h-[40px]">
-                <p className="text-sm text-gray-700">Matin</p>
+                <p className="text-sm text-gray-700">Déjeuner</p>
               </div>
               <div className="p-2 bg-white rounded border border-gray-200 min-h-[40px]">
-                <p className="text-sm text-gray-700">Après-midi</p>
+                <p className="text-sm text-gray-700">Dîner</p>
               </div>
             </div>
           </div>
