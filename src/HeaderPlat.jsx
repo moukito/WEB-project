@@ -1,20 +1,54 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
 
 const Header = () => {
-  const location = useLocation(); // Récupère l'URL actuelle
-
-  // Fonction utilitaire pour déterminer si une route est active
-  const isActive = (path) => (location.pathname === path ? "font-bold" : "");
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="p-4 bg-black text-white flex space-x-4">
-      <Link to="/" className={`text-lg ${isActive("/")}`}>Accueil</Link>
-      <Link to="/ingredients" className={`text-lg ${isActive("/ingredients")}`}>Ingrédients</Link>
-      <Link to="/plats" className={`text-lg ${isActive("/plats")}`}>Plats</Link>
-      <Link to="/menu" className={`text-lg ${isActive("/menu")}`}>Menu</Link>
-      <Link to="/planning" className={`text-lg ${isActive("/planning")}`}>Planning</Link>
-    </nav>
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "#0D1B2A", // Bleu foncé
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+      }}
+    >
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "10px 0",
+        }}
+      >
+        {["/", "/ingredients", "/plats", "/menu", "/planning"].map((path, index) => {
+          const labels = ["Accueil", "Ingrédients", "Plats", "Menu", "Planning"];
+          return (
+            <Button
+              key={path}
+              color="inherit"
+              component={Link}
+              to={path}
+              sx={{
+                color: isActive(path) ? "#FFD700" : "#E0E1DD", // Or jaune pour actif, gris clair pour inactif
+                fontSize: "1.2rem",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+                padding: "10px 20px",
+                borderRadius: "8px",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "#1B263B", // Bleu légèrement plus clair au survol
+                  color: "#FFD700",
+                },
+              }}
+            >
+              {labels[index]}
+            </Button>
+          );
+        })}
+      </Toolbar>
+    </AppBar>
   );
 };
 
