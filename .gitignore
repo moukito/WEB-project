@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 *-lock.*
 .vite
-db.env
+*.env
