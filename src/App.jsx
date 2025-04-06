@@ -4,6 +4,7 @@ import Menu from "./pageMenu.jsx";
 import Header from "./HeaderPlat";
 import PageAccueil from "./PageAccueil.jsx"
 import Planning from "./planning_page.jsx"
+import Footer from "./footer.jsx";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/menu" element={<Menu />} />
           <Route path="/planning" element={<Planning />} />
         </Routes>
+        <Footer />
     </Router>
   );
 };
