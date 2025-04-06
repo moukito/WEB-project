@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Button } from '@mui/material';
 
 /**
  * Determines the season based on a given date
@@ -145,20 +146,61 @@ const PlanningGrid = ({ numberOfWeeks, startDate }) => {
 };
 
 /**
- * Footer component with generate button
+ * Footer component with generate button and confirmation dialog
  * @param {Object} props - Component props
  * @param {Function} props.onGenerate - Function to call when generate button is clicked
  */
-const Footer = ({ onGenerate }) => (
-	<footer className="bg-gray-800 text-white text-center py-6 text-lg flex justify-center">
-		<button
-			onClick={onGenerate}
-			className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition w-1/2 mx-2"
-		>
-			Générer le planning
-		</button>
-	</footer>
-);
+const Footer = ({ onGenerate }) => {
+	const [openDialog, setOpenDialog] = useState(false);
+
+	const handleOpenDialog = () => {
+		setOpenDialog(true);
+	};
+
+	const handleCloseDialog = () => {
+		setOpenDialog(false);
+	};
+
+	const handleConfirm = () => {
+		setOpenDialog(false);
+		onGenerate();
+	};
+
+	return (
+		<footer className="bg-gray-800 text-white text-center py-6 text-lg flex justify-center">
+			<button
+				onClick={handleOpenDialog}
+				className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition w-1/2 mx-2"
+			>
+				Générer le planning
+			</button>
+
+			<Dialog
+				open={openDialog}
+				onClose={handleCloseDialog}
+				aria-labelledby="alert-dialog-title"
+				aria-describedby="alert-dialog-description"
+			>
+				<DialogTitle id="alert-dialog-title">
+					{"Confirmation de génération"}
+				</DialogTitle>
+				<DialogContent>
+					<DialogContentText id="alert-dialog-description">
+						Êtes-vous sûr de vouloir générer le planning avec les paramètres sélectionnés ?
+					</DialogContentText>
+				</DialogContent>
+				<DialogActions>
+					<Button onClick={handleCloseDialog} color="primary">
+						Annuler
+					</Button>
+					<Button onClick={handleConfirm} color="primary" autoFocus>
+						Confirmer
+					</Button>
+				</DialogActions>
+			</Dialog>
+		</footer>
+	);
+};
 
 /**
  * Main planning page component
