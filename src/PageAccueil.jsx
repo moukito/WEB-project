@@ -20,7 +20,7 @@ const getDate = (offset) => {
 const RepasCard = ({ jour, type, openModal }) => (
   <div
     className={`p-4 rounded-lg cursor-pointer hover:shadow-md transition ${
-      type === 'midi' ? 'bg-blue-100' : 'bg-yellow-100'
+      type === 'midi' ? 'bg-blue-100 hover:bg-blue-300' : 'bg-yellow-100 hover:bg-yellow-300'
     } w-full min-h-[120px] flex flex-col justify-center`}
     onClick={() => openModal(jour, type)}
   >
