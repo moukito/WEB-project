@@ -99,10 +99,10 @@ const PageAccueil = () => {
           </div>
         </div>
       )}
-
-      <footer className="bg-gray-800 text-white text-center py-6 text-lg">
+    
+      {/* <footer className="bg-gray-800 text-white text-center py-6 text-lg">
         © {new Date().getFullYear()} - Tous droits réservés
-      </footer>
+      </footer> */}
     </div>
   );
 };
