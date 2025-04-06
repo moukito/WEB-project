@@ -19,15 +19,17 @@ const getDate = (offset) => {
 
 const RepasCard = ({ jour, type, openModal }) => (
   <div
-    className={`p-4 rounded-lg cursor-pointer hover:shadow-md transition ${type === 'midi' ? 'bg-blue-100' : 'bg-yellow-100'}`}
+    className={`p-4 rounded-lg cursor-pointer hover:shadow-md transition ${
+      type === 'midi' ? 'bg-blue-100' : 'bg-yellow-100'
+    } w-full`}
     onClick={() => openModal(jour, type)}
   >
-    <h3 className="text-xl font-medium text-black">{type === 'midi' ? 'Midi' : 'Soir'}</h3>
+    <h3 className="text-xl font-medium text-black text-center">{type === 'midi' ? 'Midi' : 'Soir'}</h3>
     {jour[type] ? (
       <>
-        <p className="text-black"><strong>Entrée :</strong> {jour[type].entree}</p>
-        <p className="text-black"><strong>Plat :</strong> {jour[type].plat}</p>
-        <p className="text-black"><strong>Dessert :</strong> {jour[type].dessert}</p>
+        <p className="text-black text-left"><strong>Entrée :</strong> {jour[type].entree}</p>
+        <p className="text-black text-left"><strong>Plat :</strong> {jour[type].plat}</p>
+        <p className="text-black text-left"><strong>Dessert :</strong> {jour[type].dessert}</p>
       </>
     ) : (
       <p className="text-black font-semibold">Pas de repas</p>
@@ -35,36 +37,58 @@ const RepasCard = ({ jour, type, openModal }) => (
   </div>
 );
 
+const FutureCard = () => (
+  <div className="p-4 rounded-lg bg-gray-200 w-full">
+    <p className="text-black text-center italic">Menu pas encore publié</p>
+  </div>
+);
+
 const PageAccueil = () => {
   const navigate = useNavigate();
-  const planning = menusSemaine.map((menu, i) => ({
-    ...menu,
-    jour: getDate(i),
-  }));
+  const [startIndex, setStartIndex] = useState(0);
+  const cardsToShow = 4;
+
+  const generatePlanning = (start) => {
+    const planning = [];
+    for (let i = 0; i < cardsToShow; i++) {
+      const dayIndex = start + i;
+      if (dayIndex < menusSemaine.length) {
+        planning.push({
+          ...menusSemaine[dayIndex],
+          jour: getDate(dayIndex),
+          isFuture: false
+        });
+      } else {
+        planning.push({
+          jour: getDate(dayIndex),
+          isFuture: true
+        });
+      }
+    }
+    return planning;
+  };
+
+  const visiblePlanning = generatePlanning(startIndex);
 
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [mealType, setMealType] = useState(null);
-  const [currentDayIndex, setCurrentDayIndex] = useState(null);
 
   const openModal = (jour, type) => {
-    const index = planning.findIndex(item => item.jour === jour);
     setSelectedMeal(jour);
     setMealType(type);
-    setCurrentDayIndex(index);
   };
 
   const closeModal = () => {
     setSelectedMeal(null);
     setMealType(null);
-    setCurrentDayIndex(null);
   };
 
-  const navigateDay = (direction) => {
-    const newIndex = currentDayIndex + direction;
-    if (newIndex >= 0 && newIndex < planning.length) {
-      setCurrentDayIndex(newIndex);
-      setSelectedMeal(planning[newIndex].jour);
-    }
+  const goToPreviousCards = () => {
+    setStartIndex(prev => Math.max(0, prev - cardsToShow));
+  };
+
+  const goToNextCards = () => {
+    setStartIndex(prev => prev + cardsToShow);
   };
 
   return (
@@ -73,28 +97,58 @@ const PageAccueil = () => {
         Planning des repas
       </header>
 
-      <main className="flex-grow py-10 px-6 flex justify-center">
-        <div className="w-full max-w-7xl">
+      <main className="flex-grow py-10 px-6">
+        <div className="w-full max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-10 text-black">Semaine à venir</h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {planning.map((jour, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-xl text-center">
-                <h2 className="text-2xl font-semibold mb-4 text-gray-700">{jour.jour}</h2>
-                <div className="grid grid-cols-2 gap-4">
-                  {['midi', 'soir'].map((type) => (
-                    <RepasCard key={type} jour={jour} type={type} openModal={openModal} />
-                  ))}
+          
+          <div className="flex items-center justify-center">
+            <div className="mr-4">
+              <button 
+                onClick={goToPreviousCards} 
+                className="px-4 py-2 rounded bg-gray-500 text-white hover:bg-gray-600 cursor-pointer transition"
+              >
+                Précédent
+              </button>
+            </div>
+            
+            <div className="flex space-x-8">
+              {visiblePlanning.map((jour, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-xl text-center w-80 flex-shrink-0">
+                  <h2 className="text-2xl font-semibold mb-4 text-gray-700">{jour.jour}</h2>
+                  {jour.isFuture ? (
+                    <FutureCard />
+                  ) : (
+                    <div className="grid grid-cols-1 gap-4 w-full">
+                      {['midi', 'soir'].map((type) => (
+                        <RepasCard 
+                          key={type} 
+                          jour={jour} 
+                          type={type} 
+                          openModal={openModal}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            
+            <div className="ml-4">
+              <button 
+                onClick={goToNextCards} 
+                className="px-4 py-2 rounded bg-gray-500 text-white hover:bg-gray-600 cursor-pointer transition"
+              >
+                Suivant
+              </button>
+            </div>
           </div>
         </div>
       </main>
 
-      {selectedMeal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center transition-transform duration-500 transform">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-black transform transition-transform duration-500">
-            <h2 className="text-2xl font-bold mb-4">{selectedMeal} - {mealType === 'midi' ? 'Midi' : 'Soir'}</h2>
+      {selectedMeal && !selectedMeal.isFuture && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-black">
+            <h2 className="text-2xl font-bold mb-4">{selectedMeal.jour} - {mealType === 'midi' ? 'Midi' : 'Soir'}</h2>
             {selectedMeal[mealType] ? (
               <>
                 <p><strong>Allergènes :</strong> {selectedMeal[mealType].allergenes.length > 0 ? selectedMeal[mealType].allergenes.join(', ') : 'Aucun'}</p>
@@ -104,11 +158,12 @@ const PageAccueil = () => {
               <p className="text-black font-semibold">Pas de repas</p>
             )}
             <div className="flex justify-between mt-4">
-              <button onClick={closeModal} className="bg-gray-500 text-white px-4 py-2 rounded">Fermer</button>
-              <div className="flex gap-4">
-                <button onClick={() => navigateDay(-1)} disabled={currentDayIndex === 0} className="bg-gray-500 text-white px-4 py-2 rounded">Jour précédent</button>
-                <button onClick={() => navigateDay(1)} disabled={currentDayIndex === planning.length - 1} className="bg-gray-500 text-white px-4 py-2 rounded">Jour suivant</button>
-              </div>
+              <button onClick={closeModal} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 cursor-pointer transition">
+                Fermer
+              </button>
+              <button onClick={() => {navigate("/menu")}} className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600 cursor-pointer transition">
+                Modifier
+              </button>
             </div>
           </div>
         </div>
