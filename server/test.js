@@ -16,8 +16,7 @@ const addShoe = async () => {
         };
 
         // Envoie une requête POST pour ajouter la chaussure
-        const response = await axios.post('http://localhost:5000/api/chaussures', newShoe);
-        
+        const response = await axios.post('http://localhost:5001/api/chaussures', newShoe);
         console.log('Chaussure ajoutée:', response.data);
 
         return response.data;  // On retourne l'objet ajouté pour la récupération
