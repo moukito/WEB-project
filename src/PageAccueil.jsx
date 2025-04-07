@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Array of weekly meal data
+ * @type {Array<Object>}
+ */
 const MENUS_SEMAINE = [
   { midi: { entree: 'Salade verte', plat: 'Poulet rôti', dessert: 'Tarte aux pommes', allergenes: ['Gluten'], proteines: '15g' }, soir: { entree: 'Soupe de légumes', plat: 'Omelette', dessert: 'Yaourt', allergenes: [] } },
   { midi: { entree: 'Tomates mozzarella', plat: 'Pâtes au pesto', dessert: 'Glace', allergenes: ['Lactose', 'Fruits à coque'], proteines: '20g' }, soir: null },
@@ -11,16 +15,30 @@ const MENUS_SEMAINE = [
   { midi: { entree: 'Brunch complet', plat: 'Œufs brouillés', dessert: 'Pancakes', allergenes: ['Lactose'], proteines: '24g' }, soir: { entree: 'Terrine', plat: 'Rôti de bœuf', dessert: 'Tarte aux fraises', allergenes: ['Gluten', 'Fruits de mer'], proteines: '28g' } },
 ];
 
+/**
+ * Number of meal cards to display at once
+ * @type {number}
+ */
 const CARDS_TO_SHOW = 4;
 
-// Helper functions
+/**
+ * Formats a date with the given offset from today
+ * @param {number} offset - Number of days from today
+ * @returns {string} Formatted date string in French locale
+ */
 const getFormattedDate = (offset) => {
   const date = new Date();
   date.setDate(date.getDate() + offset);
   return date.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' });
 };
 
-// Components
+/**
+ * Component for displaying a meal card
+ * @param {Object} props - Component props
+ * @param {Object} props.jour - Day object containing meal data
+ * @param {string} props.type - Meal type ('midi' or 'soir')
+ * @param {Function} props.openModal - Function to open meal details modal
+ */
 const RepasCard = ({ jour, type, openModal }) => (
   <div
     className={`p-4 rounded-lg cursor-pointer hover:shadow-md transition ${
@@ -41,12 +59,22 @@ const RepasCard = ({ jour, type, openModal }) => (
   </div>
 );
 
+/**
+ * Component for displaying future/unpublished meals
+ */
 const FutureCard = () => (
   <div className="p-6 rounded-lg bg-gray-200 w-full flex items-center justify-center min-h-[200px]">
     <p className="text-black text-center italic">Menu pas encore publié</p>
   </div>
 );
 
+/**
+ * Navigation buttons component
+ * @param {Object} props - Component props
+ * @param {Function} props.onPrevious - Handler for previous button click
+ * @param {Function} props.onToday - Handler for today button click
+ * @param {Function} props.onNext - Handler for next button click
+ */
 const NavigationButtons = ({ onPrevious, onToday, onNext }) => (
   <div className="absolute right-4 top-1/4 transform -translate-y-1/2 flex space-x-2">
     <button 
@@ -70,6 +98,14 @@ const NavigationButtons = ({ onPrevious, onToday, onNext }) => (
   </div>
 );
 
+/**
+ * Meal details modal component
+ * @param {Object} props - Component props
+ * @param {Object} props.selectedMeal - Selected meal data
+ * @param {string} props.mealType - Type of selected meal ('midi' or 'soir')
+ * @param {Function} props.onClose - Handler for closing modal
+ * @param {Function} props.onEdit - Handler for edit button click
+ */
 const MealModal = ({ selectedMeal, mealType, onClose, onEdit }) => (
   <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
     <div className="bg-white p-6 rounded-lg shadow-lg w-96 text-black">
@@ -94,13 +130,19 @@ const MealModal = ({ selectedMeal, mealType, onClose, onEdit }) => (
   </div>
 );
 
+/**
+ * Main page component for meal planning
+ */
 const PageAccueil = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
   const [selectedMeal, setSelectedMeal] = useState(null);
   const [mealType, setMealType] = useState(null);
 
-  // Menu data management
+  /**
+   * Generates the visible planning data based on current start index
+   * @returns {Array<Object>} Array of meal data for visible days
+   */
   const generateVisiblePlanning = () => {
     return Array.from({ length: CARDS_TO_SHOW }, (_, i) => {
       const dayIndex = startIndex + i;
@@ -120,22 +162,42 @@ const PageAccueil = () => {
 
   const visiblePlanning = generateVisiblePlanning();
 
-  // Navigation handlers
+  /**
+   * Navigates to today's meals
+   */
   const navigateToToday = () => setStartIndex(0);
+  
+  /**
+   * Navigates to previous set of meals
+   */
   const navigateToPrevious = () => setStartIndex(prev => Math.max(0, prev - CARDS_TO_SHOW));
+  
+  /**
+   * Navigates to next set of meals
+   */
   const navigateToNext = () => setStartIndex(prev => prev + CARDS_TO_SHOW);
 
-  // Modal handlers
+  /**
+   * Opens meal details modal
+   * @param {Object} jour - Day object containing meal data
+   * @param {string} type - Meal type ('midi' or 'soir')
+   */
   const openMealModal = (jour, type) => {
     setSelectedMeal(jour);
     setMealType(type);
   };
 
+  /**
+   * Closes meal details modal
+   */
   const closeMealModal = () => {
     setSelectedMeal(null);
     setMealType(null);
   };
 
+  /**
+   * Navigates to meal edit page
+   */
   const navigateToEdit = () => navigate("/menu");
 
   return (
