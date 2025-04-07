@@ -1,4 +1,4 @@
-import Dish from "models/Dish.js";
+import Dish from "./Dish.js";
 
 class Appetizer extends Dish {
     constructor(name, description, cost = 0, ingredients = [], isCold = false) {

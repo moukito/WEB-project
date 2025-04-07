@@ -1,4 +1,4 @@
-import Dish from "models/Dish.js";
+import Dish from "./Dish.js";
 
 class Dessert extends Dish {
     constructor(name, description, cost, ingredients = [], containLactose = true) {
