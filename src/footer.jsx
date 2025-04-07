@@ -47,7 +47,7 @@ function Footer() {
 				</div>
 			</nav>
 			<aside className="flex items-center gap-4">
-				<img src={YatisLogo} alt="Yatis Logo" className="w-15 h-15" />
+				<img src={YatisLogo} alt="Yatis Logo" className="w-16 h-16" />
 				<p>Copyright © {new Date().getFullYear()} - All right reserved by ACME Industries Ltd</p>
 			</aside>
 		</footer>
