@@ -1,37 +1,55 @@
-import { useNavigate } from "react-router-dom";
-import CartIcon from "./CartIcon";
-import logo from "../assets/yatis_shoes.svg"
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
 
-function CreateButton({nom, path}){
-    const navigate = useNavigate();
-    function handleClick(){
-        navigate(path);
-    }
-    return <button onClick={handleClick}>{nom}</button>
-}
+const Header = () => {
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
 
-
-function Header(){
-    return (
-        <>
-            <div className="flex items-center justify-between p-4 bg-white shadow-md">
-                <div className="flex space-x-4">
-                    <img src={logo} style={{ height: "50px" }} />
-                <CreateButton nom = {"Lifestyle"} path = "/lifestyle"/>
-                    <CreateButton nom = {"Football"} path = "/football"/>
-                    <CreateButton nom = {"Basketball"}/>
-                    <CreateButton nom = {"Running"}/>
-                </div>
-                <div className="flex space-x-4">
-                    <CreateButton nom = {"Recherche"}/>
-                    <CreateButton nom = {"Favoris"}/>
-                    <CreateButton nom = {"Acheter"}/>
-                    <CartIcon />
-                </div>
-            </div>
-        </>
-    )
-}
-
+  return (
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "#0D1B2A", // Bleu foncé
+        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+      }}
+    >
+      <Toolbar
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          padding: "10px 0",
+        }}
+      >
+        {["/", "/ingredients", "/plats", "/menu", "/planning"].map((path, index) => {
+          const labels = ["Accueil", "Ingrédients", "Plats", "Menu", "Planning"];
+          return (
+            <Button
+              key={path}
+              color="inherit"
+              component={Link}
+              to={path}
+              sx={{
+                color: isActive(path) ? "#FFD700" : "#E0E1DD", // Or jaune pour actif, gris clair pour inactif
+                fontSize: "1.2rem",
+                fontWeight: "bold",
+                textTransform: "uppercase",
+                padding: "10px 20px",
+                borderRadius: "8px",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  backgroundColor: "#1B263B", // Bleu légèrement plus clair au survol
+                  color: "#FFD700",
+                },
+              }}
+            >
+              {labels[index]}
+            </Button>
+          );
+        })}
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export default Header;

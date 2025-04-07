@@ -133,7 +133,7 @@ const MealModal = ({ selectedMeal, mealType, onClose, onEdit }) => (
 /**
  * Main page component for meal planning
  */
-const PageAccueil = () => {
+const HomePage = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
   const [selectedMeal, setSelectedMeal] = useState(null);
@@ -257,4 +257,4 @@ const PageAccueil = () => {
   );
 };
 
-export default PageAccueil;
+export default HomePage;

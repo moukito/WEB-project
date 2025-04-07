@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Menu from "./pageMenu.jsx";
-import Header from "./HeaderPlat";
-import PageAccueil from "./PageAccueil.jsx"
-import Planning from "./pages/generatePlanning.jsx"
-import Footer from "./footer.jsx";
+import Menu from "./pages/MenuPage.jsx";
+import Header from "./components/Header.jsx";
+import HomePage from "./pages/HomePage.jsx"
+import Planning from "./pages/GeneratePlanningPage.jsx"
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <Header />
           <div className="flex-grow">
             <Routes>
-              <Route path="/" element={<PageAccueil />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/planning" element={<Planning />} />
             </Routes>
