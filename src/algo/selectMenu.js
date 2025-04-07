@@ -148,9 +148,11 @@ function prixMoyenneSelection(menu) {
       (total + element.ingredients.reduce((sum, ingredient) => 
         sum + ingredient.prix, 0)), 0) / elements.length;
   }
-  return prixMoyenneElements(menu.entrees)
-  + prixMoyenneElements(menu.plats)
-  + prixMoyenneElements(menu.desserts);
+  return (
+    prixMoyenneElements(menu.entrees) +
+    prixMoyenneElements(menu.plats) +
+    prixMoyenneElements(menu.desserts)
+  );
 }
 
 console.log("Prix total des entrées:")
