@@ -5,9 +5,9 @@ function Footer() {
 	return (
 		<footer className="footer footer-horizontal footer-center bg-gray-800 text-white p-5 padding-bottom-5">
 			<nav className="flex gap-4 justify-evenly text-center pb-4">
-				<a className="link link-hover" style={{ flexBasis: '400px' }}>Infos sur l’entreprise</a>
-				<a className="link link-hover" style={{ flexBasis: '400px' }}>Politique de confidentialité</a>
-				<a className="link link-hover" style={{ flexBasis: '400px' }}>Conditions génerales d’utilisation</a>
+				<a href="#" className="link link-hover" style={{ flexBasis: '400px' }}>Infos sur l’entreprise</a>
+				<a href="#" className="link link-hover" style={{ flexBasis: '400px' }}>Politique de confidentialité</a>
+				<a href="#" className="link link-hover" style={{ flexBasis: '400px' }}>Conditions génerales d’utilisation</a>
 			</nav>
 			<nav>
 				<div className="flex justify-center bg-gray-800 grid grid-flow-col gap-20">
