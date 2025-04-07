@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import ChoisirMenu from "./choisir_menu";
-import CreerMenu from "./creer_menu"; // Import du composant CreerMenu
+import ChoisirMenu from "../components/choisir_menu.jsx";
+import CreerMenu from "../components/creer_menu.jsx"; // Import du composant CreerMenu
 
 const Menu = () => {
   const [mode, setMode] = useState(null);

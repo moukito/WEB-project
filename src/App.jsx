@@ -5,8 +5,8 @@ import Header from "./components/Header.jsx";
 import HomePage from "./pages/HomePage.jsx"
 import Planning from "./pages/GeneratePlanningPage.jsx"
 import Footer from "./components/Footer.jsx";
-import Ingredients from "./ingredients_page.jsx"
-import Plats from "./plats_page.jsx"
+import Ingredients from "./pages/ingredients_page.jsx"
+import Plats from "./pages/plats_page.jsx"
 
 const App = () => {
   return (
