@@ -10,29 +10,9 @@ mongoose.connect('mongodb://localhost:27017/menus', { useNewUrlParser: true, use
   });
 
 // Définition du schéma du menu
-const menuSchema = new mongoose.Schema({
-  menu_1: {
-    entrees: [String],
-    plats: {
-      viande: String,
-      poisson: String,
-      vegetarien: String
-    },
-    desserts: [String]
-  },
-  menu_2: {
-    entrees: [String],
-    plats: {
-      viande: String,
-      poisson: String,
-      vegetarien: String
-    },
-    desserts: [String]
-  }
-});
+const menuSchema = new mongoose.Schema({}, { strict: false });
+const Menu = mongoose.model('Menu', menuSchema, '20_repas'); // ← forcer le nom de la collection ici
 
-// Modèle Menu basé sur le schéma
-const Menu = mongoose.model('Menu', menuSchema);
 
 // Fonction pour générer la rotation des menus avec dates
 async function genererRotationMenusAvecDates(nbSemaines, dateDebut) {
@@ -44,35 +24,25 @@ async function genererRotationMenusAvecDates(nbSemaines, dateDebut) {
 
   if (menusDB.length === 0) {
     console.log("Aucun menu trouvé dans la base de données.");
-    return;
+    return [];
   }
 
   let indexMenu = 0;
   const date = new Date(dateDebut); // dateDebut en format "YYYY-MM-DD"
 
   for (let i = 0; i < nbJours; i++) {
-    const menu = menusDB[indexMenu % menusDB.length]; // Choisir le menu de manière cyclique
-
-    // Alterner entre les deux menus (menu_1 et menu_2)
-    const menuMidi = {
-      titre: `Entrées: ${menu.menu_1.entrees.join(', ')}, Plats: Viande: ${menu.menu_1.plats.viande}, Poisson: ${menu.menu_1.plats.poisson}, Végétarien: ${menu.menu_1.plats.vegetarien}, Desserts: ${menu.menu_1.desserts.join(', ')}`
-    };
-
-    const menuSoir = {
-      titre: `Entrées: ${menu.menu_2.entrees.join(', ')}, Plats: Viande: ${menu.menu_2.plats.viande}, Poisson: ${menu.menu_2.plats.poisson}, Végétarien: ${menu.menu_2.plats.vegetarien}, Desserts: ${menu.menu_2.desserts.join(', ')}`
-    };
-
+    const menuMidi = menusDB[indexMenu % menusDB.length];
+    indexMenu++;
+    const menuSoir = menusDB[indexMenu % menusDB.length];
     indexMenu++;
 
-    const dateJour = new Date(date); // clone la date
-    dateJour.setDate(date.getDate() + i); // ajoute i jours
+    const dateJour = new Date(date);
+    dateJour.setDate(date.getDate() + i);
 
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const dateStr = dateJour.toLocaleDateString('fr-FR', options);
+    const dateStr = dateJour.toISOString().split('T')[0]; // format YYYY-MM-DD
 
     resultats.push({
-      jour: dateStr,
-      menus: {
+      [dateStr]: {
         midi: [menuMidi],
         soir: [menuSoir]
       }
@@ -82,14 +52,50 @@ async function genererRotationMenusAvecDates(nbSemaines, dateDebut) {
   return resultats;
 }
 
+
 // Appeler la fonction pour générer la rotation des menus
-const dateDebut = "2025-04-07"; // format ISO (AAAA-MM-JJ)
-const rotation = await genererRotationMenusAvecDates(2, dateDebut);
+const dateDebut = "2025-04-28"; // format ISO (AAAA-MM-JJ)
+const rotation = await genererRotationMenusAvecDates(1, dateDebut);
 
 // Afficher la rotation des menus dans la console
+// Affichage lisible
 rotation.forEach((jourObj, index) => {
-  console.log(`Jour ${index + 1} - ${jourObj.jour}`);
-  console.log(`  🥗 Midi : ${jourObj.menus.midi[0].titre}`);
-  console.log(`  🍲 Soir : ${jourObj.menus.soir[0].titre}`);
+  const dateStr = Object.keys(jourObj)[0];
+  const menus = jourObj[dateStr];
+
+  console.log(`Jour ${index + 1} - ${dateStr}`);
+  console.log(`  🥗 Midi : ${formatMenu(menus.midi[0])}`);
+  console.log(`  🍲 Soir : ${formatMenu(menus.soir[0])}`);
   console.log('-------------------------------------');
 });
+
+function formatMenu(menu) {
+  if (!menu || !menu.plats) return "Aucun menu";
+
+  const plats = menu.plats;
+
+  // Entrées : vérifier si c'est un tableau et joindre les éléments s'il y en a
+  const entrees = Array.isArray(menu.entrees) ? 
+    menu.entrees.join(', ') : 'Aucune entrée';
+
+  // Viande : on garde le texte tel quel, si présent
+  const viande = plats.viande || 'Aucune viande';
+
+  // Poisson : on garde le texte tel quel, si présent
+  const poisson = plats.poisson || 'Aucun poisson';
+
+  // Végétarien : pareil, texte ou 'Aucun'
+  const vegetarien = plats.vegetarien || 'Aucun plat végétarien';
+
+  // Desserts : vérifier si c'est un tableau et joindre les éléments s'il y en a
+  const desserts = Array.isArray(menu.desserts) ? 
+    menu.desserts.join(', ') : 'Aucun dessert';
+
+  return `
+    🥗 Entrées     : ${entrees}
+    🍖 Viande      : ${viande}
+    🐟 Poisson     : ${poisson}
+    🥦 Végétarien  : ${vegetarien}
+    🍰 Desserts    : ${desserts}
+  `.trim();
+}
