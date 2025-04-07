@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import { AppBar, Toolbar, Button } from "@mui/material";
 
 const Header = () => {
   const location = useLocation();
@@ -14,6 +14,12 @@ const Header = () => {
     { path: "/planning", label: "Planning" },
   ];
 
+  const handleClick = (path) => {
+    if (isActive(path)) {
+      window.location.reload();
+    }
+  };
+
   return (
     <AppBar
       position="static"
@@ -22,7 +28,7 @@ const Header = () => {
         boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
         transition: "background-color 0.3s ease",
         "&:hover": {
-          backgroundColor: "#142C44", // Légèrement plus clair au survol
+          backgroundColor: "#142C44",
         },
       }}
     >
@@ -41,6 +47,7 @@ const Header = () => {
             color="inherit"
             component={Link}
             to={path}
+            onClick={() => handleClick(path)}
             sx={{
               color: isActive(path) ? "#FFD700" : "#E0E1DD",
               fontSize: "1.2rem",
