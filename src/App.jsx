@@ -4,6 +4,8 @@ import Menu from "./pageMenu.jsx";
 import Header from "./HeaderPlat";
 import PageAccueil from "./PageAccueil.jsx"
 import Planning from "./planning_page.jsx"
+import Ingredients from "./ingredients_page.jsx"
+import Plats from "./plats_page.jsx"
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
           <Route path="/" element={<PageAccueil />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/planning" element={<Planning />} />
+          <Route path="/ingredients" element={<Ingredients />} />
+          <Route path="/plats" element={<Plats />} />
         </Routes>
     </Router>
   );
