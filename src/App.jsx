@@ -5,6 +5,8 @@ import Header from "./components/Header.jsx";
 import HomePage from "./pages/HomePage.jsx"
 import Planning from "./pages/GeneratePlanningPage.jsx"
 import Footer from "./components/Footer.jsx";
+import Ingredients from "./pages/ingredients_page.jsx"
+import Plats from "./pages/plats_page.jsx"
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
               <Route path="/" element={<HomePage />} />
               <Route path="/menu" element={<Menu />} />
               <Route path="/planning" element={<Planning />} />
+	          <Route path="/ingredients" element={<Ingredients />} />
+	          <Route path="/plats" element={<Plats />} />
             </Routes>
           </div>
         <Footer />
