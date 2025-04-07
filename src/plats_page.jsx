@@ -64,7 +64,7 @@ const PlatsPage = ({ entrees = [], plats = [], desserts = [] }) => {
 
     return (
         <div className="flex flex-col items-center p-4">
-            <h1 className="text-2xl font-bold text-[#E0E1DD] mb-6">Choisir un plat</h1>
+            <h1 className="text-2xl font-bold text-[#E0E1DD] mb-6">Choisir un élément</h1>
             {renderSection("Entrées", entrees)}
             {renderSection("Plats", plats)}
             {renderSection("Desserts", desserts)}
