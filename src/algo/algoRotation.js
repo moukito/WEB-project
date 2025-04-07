@@ -1,3 +1,4 @@
+
 /**
  * Répartit les menus sur un certain nombre de semaines
  * @param {number} nbSemaines - Le nombre de semaines à répartir
