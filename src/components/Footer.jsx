@@ -1,5 +1,5 @@
 import React from 'react';
-import YatisLogo from "./assets/yatis_logo.svg"
+import YatisLogo from "../assets/yatis_logo.svg"
 
 function Footer() {
 	return (
