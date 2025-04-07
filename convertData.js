@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const recettesPath = path.join(__dirname, 'liste recette.xlsx - Feuil1.csv');
-const marchandisesPath = path.join(__dirname, 'liste marchandise.xlsx - Feuil1.csv');
+const recettesPath = path.join(__dirname, 'data/liste recette.xlsx - Feuil1.csv');
+const marchandisesPath = path.join(__dirname, 'data/liste marchandise.xlsx - Feuil1.csv');
 
 // todo : change it with a better solution
 const allergens = [
