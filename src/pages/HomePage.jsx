@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 /**
- * Array of weekly meal data
+ * Array of weekly meal data starting from today
  * @type {Array<Object>}
  */
 const MENUS_SEMAINE = [
@@ -15,10 +15,6 @@ const MENUS_SEMAINE = [
   { midi: { entree: 'Brunch complet', plat: 'Œufs brouillés', dessert: 'Pancakes', allergenes: ['Lactose'], proteines: '24g' }, soir: { entree: 'Terrine', plat: 'Rôti de bœuf', dessert: 'Tarte aux fraises', allergenes: ['Gluten', 'Fruits de mer'], proteines: '28g' } },
 ];
 
-/**
- * Number of meal cards to display at once
- * @type {number}
- */
 const CARDS_TO_SHOW = 4;
 
 /**
@@ -69,29 +65,62 @@ const FutureCard = () => (
 );
 
 /**
- * Navigation buttons component
+ * Button-style date picker component
+ * @param {Object} props - Component props
+ * @param {Function} props.onDateSelect - Callback when date is selected
+ */
+const DatePickerButton = ({ onDateSelect }) => {
+  const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+
+  /**
+   * Handles date selection
+   * @param {Object} e - Change event from input
+   */
+  const handleDateChange = (e) => {
+    const date = e.target.value;
+    setSelectedDate(date);
+    onDateSelect(date);
+  };
+
+  return (
+    <div className="relative">
+      <input
+        type="date"
+        value={selectedDate}
+        onChange={handleDateChange}
+        className="border border-gray-300 rounded p-2 px-4 py-2 cursor-pointer"
+        min={new Date().toISOString().split('T')[0]}
+      />
+    </div>
+  );
+};
+
+/**
+ * Navigation buttons component with date picker
  * @param {Object} props - Component props
  * @param {Function} props.onPrevious - Handler for previous button click
  * @param {Function} props.onToday - Handler for today button click
  * @param {Function} props.onNext - Handler for next button click
+ * @param {Function} props.onDateSelect - Handler for date selection
  */
-const NavigationButtons = ({ onPrevious, onToday, onNext }) => (
-  <div className="absolute right-4 top-1/4 transform -translate-y-1/2 flex space-x-2">
+const NavigationButtons = ({ onPrevious, onToday, onNext, onDateSelect }) => (
+  <div className="absolute right-4 top-1/4 transform -translate-y-1/2 flex space-x-2 items-center">
+    <DatePickerButton onDateSelect={onDateSelect} />
     <button 
       onClick={onPrevious} 
-      className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer transition"
+      className="px-3 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 cursor-pointer transition"
     >
       {`<`}
     </button>
     <button
       onClick={onToday}
-      className="px-2 py-2 rounded bg-orange-500 text-white hover:bg-orange-700 cursor-pointer transition" 
+      className="px-3 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 cursor-pointer transition" 
     >
       Aujourd'hui
     </button>
     <button 
       onClick={onNext} 
-      className="px-2 py-2 rounded bg-blue-500 text-white hover:bg-blue-700 cursor-pointer transition"
+      className="px-3 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 cursor-pointer transition"
     >
       {`>`}
     </button>
@@ -133,7 +162,7 @@ const MealModal = ({ selectedMeal, mealType, onClose, onEdit }) => (
 /**
  * Main page component for meal planning
  */
-const HomePage = () => {
+const PageAccueil = () => {
   const navigate = useNavigate();
   const [startIndex, setStartIndex] = useState(0);
   const [selectedMeal, setSelectedMeal] = useState(null);
@@ -178,6 +207,23 @@ const HomePage = () => {
   const navigateToNext = () => setStartIndex(prev => prev + CARDS_TO_SHOW);
 
   /**
+   * Handles date selection from calendar
+   * @param {string} selectedDate - The date string in YYYY-MM-DD format
+   */
+  const handleDateSelect = (selectedDate) => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    
+    const selected = new Date(selectedDate);
+    // Calculate difference in days between selected date and today
+    const diffTime = selected - today;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    
+    // Set startIndex to show the selected date as the first card
+    setStartIndex(Math.max(0, diffDays));
+  };
+
+  /**
    * Opens meal details modal
    * @param {Object} jour - Day object containing meal data
    * @param {string} type - Meal type ('midi' or 'soir')
@@ -211,6 +257,7 @@ const HomePage = () => {
           onPrevious={navigateToPrevious}
           onToday={navigateToToday}
           onNext={navigateToNext}
+          onDateSelect={handleDateSelect}
         />
         
         <div className="w-full max-w-7xl mx-auto">  
@@ -257,4 +304,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default PageAccueil;
