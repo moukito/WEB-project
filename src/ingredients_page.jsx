@@ -4,14 +4,14 @@ import React, { useState } from "react";
 const IngredientCard = ({ ingredient, isSelected, onSelect }) => (
     <div
         className={`p-0 border rounded-lg cursor-pointer w-full ${
-            isSelected ? "border-blue-500" : "border-gray-300"
+            isSelected ? "border-blue-500" : "border-black-300"
         }`}
         onClick={onSelect}
     >
         <div className="p-4 bg-blue-100 rounded-lg w-full h-full flex flex-col justify-center text-center">
-            <p><strong>Nom :</strong> <br /> {ingredient.nom}</p>
-            <p><strong>Description :</strong> <br /> {ingredient.description}</p>
-            <p><strong>Quantité :</strong> <br /> {ingredient.quantite}</p>
+            <p className="text-black-800"><strong>Nom :</strong> <br /> {ingredient.nom}</p>
+            <p className="text-black-800"><strong>Description :</strong> <br /> {ingredient.description}</p>
+            <p className="text-black-800"><strong>Quantité :</strong> <br /> {ingredient.quantite}</p>
         </div>
     </div>
 );
@@ -44,9 +44,9 @@ const IngredientsPage = ({ legumes = [], fruits = [], epices = [] }) => {
 
     const renderSection = (title, items) => (
         <div className="mb-6 w-full">
-            <h2 className="text-xl font-semibold text-[#E0E1DD] mb-4">{title}</h2>
+            <h2 className="text-xl font-semibold text-black-200 mb-4">{title}</h2>
             {items.length === 0 ? (
-                <div className="text-center text-[#E0E1DD]">Aucun {title.toLowerCase()} disponible.</div>
+                <div className="text-center text-black-200">Aucun {title.toLowerCase()} disponible.</div>
             ) : (
                 <div className="grid grid-cols-2 gap-4">
                     {items.map((item, index) => (
@@ -64,7 +64,7 @@ const IngredientsPage = ({ legumes = [], fruits = [], epices = [] }) => {
 
     return (
         <div className="flex flex-col items-center p-4">
-            <h1 className="text-2xl font-bold text-[#E0E1DD] mb-6">Choisir un ingrédient</h1>
+            <h1 className="text-2xl font-bold text-black-200 mb-6">Choisir un ingrédient</h1>
             {renderSection("Légumes", legumes)}
             {renderSection("Fruits", fruits)}
             {renderSection("Épices", epices)}
