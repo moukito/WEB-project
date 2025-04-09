@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const PlatCard = ({ plat, isSelected, onSelect }) => (
     <div
         className={`p-4 border rounded-lg cursor-pointer w-full ${
-            isSelected ? "border-blue-500" : "border-gray-300"
+            isSelected ? "border-blue-500" : "border-black-300"
         }`}
         onClick={onSelect}
     >
@@ -44,9 +44,9 @@ const PlatsPage = ({ entrees = [], plats = [], desserts = [] }) => {
 
     const renderSection = (title, items) => (
         <div className="mb-6 w-full">
-            <h2 className="text-xl font-semibold text-[#E0E1DD] mb-4">{title}</h2>
+            <h2 className="text-xl font-semibold text-black mb-4">{title}</h2>
             {items.length === 0 ? (
-                <div className="text-center text-[#E0E1DD]">Aucun {title.toLowerCase()} disponible.</div>
+                <div className="text-center text-black">Aucun {title.toLowerCase()} disponible.</div>
             ) : (
                 <div className="grid grid-cols-2 gap-4">
                     {items.map((item, index) => (
@@ -64,7 +64,7 @@ const PlatsPage = ({ entrees = [], plats = [], desserts = [] }) => {
 
     return (
         <div className="flex flex-col items-center p-4">
-            <h1 className="text-2xl font-bold text-[#E0E1DD] mb-6">Choisir un élément</h1>
+            <h1 className="text-2xl font-bold text-black mb-6">Choisir un élément</h1>
             {renderSection("Entrées", entrees)}
             {renderSection("Plats", plats)}
             {renderSection("Desserts", desserts)}
