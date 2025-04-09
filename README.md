@@ -17,7 +17,7 @@ Ce projet, **web-project**, est une application React construite avec Vite. Il u
 Pour commencer, clonez le dépôt et installez les dépendances :
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/moukito/WEB-project.git
 cd web-project
 npm install
 ```
