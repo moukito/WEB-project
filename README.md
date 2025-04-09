@@ -90,15 +90,6 @@ Accédez à `http://localhost:3000` dans votre navigateur pour voir l'applicatio
 Ce projet est privé et n'est pas destiné à une distribution publique.
 
 ## Remerciements
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Router](https://reactrouter.com/)
-- [ESLint](https://eslint.org/)
-- [SWC](https://swc.rs/)
 - Maxence 
 - Victor 
 - Stéphane 
