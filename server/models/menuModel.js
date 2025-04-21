@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose, { Schema } from 'mongoose';
+
 
 /* Définir le schéma d'un ingredient */
 const ingredientSchema = new Schema({
